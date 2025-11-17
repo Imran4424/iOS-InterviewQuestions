@@ -67,3 +67,6 @@ An Optional in Swift is a type that safely handles the absence of a value. An op
 
 1. It contains a value of a specific type (e.g., an `Int` or a `String`)
 2. It contains `nil`, meaning there is no value present.
+
+Optionals are not pointers; they are essentially an enumeration with two cases, `some(Value)` or `none`, which the compiler uses to enforce safety
+
