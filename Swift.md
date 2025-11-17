@@ -43,3 +43,8 @@ let point = Coordinate(x: 10, y: 20) // The 'point' instance is constant
 ```
 
 ### What are value types vs reference types in Swift?
+
+- Value types: `struct`, `enum`, `Tuple`. Copied on assignment and when passed to functions.
+- Reference types: `class`, `actor`, `closures`. Passed by reference; multiple references point to the same instance.
+
+For iOS, using value types helps avoid unintended shared mutable state and simplifies reasoning about concurrency.
