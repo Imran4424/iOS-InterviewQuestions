@@ -26,3 +26,19 @@ alice.age = 31
 // This causes a compile-time error, as 'alice' is a 'let' reference:
 // alice = Person()
 ```
+
+For value types (like struct, enum, and tuples), the `let` keyword makes the entire instance immutable, along with all of its properties.
+
+```swift
+struct Coordinate {
+    var x: Int // Declared as 'var' within the struct
+    var y: Int // Declared as 'var' within the struct
+}
+
+let point = Coordinate(x: 10, y: 20) // The 'point' instance is constant
+
+// This causes a compile-time error:
+// point.x = 15
+// error: cannot assign to property: 'point' is a 'let' constant
+
+```
