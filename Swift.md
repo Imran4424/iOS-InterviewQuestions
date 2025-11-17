@@ -75,4 +75,4 @@ Optionals are not pointers; they are essentially an enumeration with two cases, 
 
 We can unwrapped optional values using `if let`, `guard let`, optional chaining, nil coalescing operator `??`, or (carefully) `!`.
 
-
+### When do you use guard let vs if let?
