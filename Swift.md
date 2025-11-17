@@ -122,5 +122,4 @@ func process(middleName: String?) {
     // You cannot use 'name' here.
     print("Process finished.")
 }
-
 ```
