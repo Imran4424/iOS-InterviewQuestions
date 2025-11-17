@@ -2,7 +2,7 @@
 
 # Core Swift Basics
 
-### What are the main differences between let and var?
+### What are the main differences between `let` and `var`?
 
 - `let` → constant binding: value cannot be reassigned after initialization.
 - `var` → variable binding: value can be reassigned.
@@ -75,4 +75,16 @@ Optionals are not pointers; they are essentially an enumeration with two cases, 
 
 We can unwrapped optional values using `if let`, `guard let`, optional chaining, nil coalescing operator `??`, or (carefully) `!`.
 
-### When do you use guard let vs if let?
+### When do you use `guard let` vs `if let`?
+
+#### `guard Let`
+
+- Used to exit early if the condition fails.
+- Keeps the unwrapped value in scope for the remainder of the function.
+
+```swift
+func process(user: User?) {
+    guard let user else { return }
+    // `user` is non-optional here
+}
+```
