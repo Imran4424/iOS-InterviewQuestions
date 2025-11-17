@@ -1,8 +1,8 @@
 # Swift Interview Questions
 
-## Core Swift Basics
+# Core Swift Basics
 
-#### What are the main differences between let and var?
+### What are the main differences between let and var?
 
 - `let` → constant binding: value cannot be reassigned after initialization.
 - `var` → variable binding: value can be reassigned.
@@ -41,3 +41,5 @@ let point = Coordinate(x: 10, y: 20) // The 'point' instance is constant
 // point.x = 15
 // error: cannot assign to property: 'point' is a 'let' constant
 ```
+
+### What are value types vs reference types in Swift?
