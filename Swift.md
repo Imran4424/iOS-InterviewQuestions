@@ -83,9 +83,22 @@ We can unwrapped optional values using `if let`, `guard let`, optional chaining,
 - Keeps the unwrapped value in scope for the remainder of the function.
 
 ```swift
-func process(user: User?) {
-    guard let user else { return }
-    // `user` is non-optional here
+func process(middleName: String?) {
+    print("Starting process...")
+
+    // Ensure we have a middle name to proceed. If not, exit immediately.
+    guard let name = middleName else {
+        print("Error: Required middle name not provided. Exiting function.")
+        return // MUST exit the scope
+    }
+
+    // The unwrapped 'name' variable is available from here until the end of the function.
+    let fullMessage = "The middle name is: \(name)"
+    print(fullMessage)
+
+    // ... main logic continues without indentation ...
+
+    print("Process finished successfully with name: \(name).")
 }
 ```
 
