@@ -48,3 +48,14 @@ let point = Coordinate(x: 10, y: 20) // The 'point' instance is constant
 - Reference types: `class`, `actor`, `closures`. Passed by reference; multiple references point to the same instance.
 
 For iOS, using value types helps avoid unintended shared mutable state and simplifies reasoning about concurrency.
+
+### What is the difference between struct and class?
+
+Key Differences:
+
+- `struct` is a value type, `class` is a reference type.
+- `class` supports inheritance; `struct` doesn’t(only through protocols).
+- `class` supports deinitializers (deinit) and reference counting; `struct` doesn’t.
+- `class` instances can be used with Objective-C runtime (@objc, dynamic) when appropriate.
+- `class` is the base of Object Oriented Programming(OOP), `struct` is base of Protocol Oriented Programming(POP)
+
