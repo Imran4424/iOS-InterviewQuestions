@@ -88,3 +88,26 @@ func process(user: User?) {
     // `user` is non-optional here
 }
 ```
+
+#### `if let`
+
+Used for branching logic; unwrapped value is only available inside the `if` block.
+
+```swift
+func process(middleName: String?) {
+    print("Starting process...")
+
+    // The unwrapped 'name' variable is only available inside these braces {}
+    if let name = middleName {
+        let fullMessage = "The middle name is: \(name)"
+        print(fullMessage)
+        // ... more operations using 'name' ...
+    } else {
+        print("No middle name provided.")
+    }
+
+    // You cannot use 'name' here.
+    print("Process finished.")
+}
+
+```
