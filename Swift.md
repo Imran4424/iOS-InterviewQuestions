@@ -61,4 +61,9 @@ Key Differences:
 
 # Optionals & Error Handling
 
-### 
+### What is an optional in Swift and why is it useful?
+
+An Optional in Swift is a type that safely handles the absence of a value. An optional variable can hold one of two states:
+
+1. It contains a value of a specific type (e.g., an `Int` or a `String`)
+2. It contains `nil`, meaning there is no value present.
