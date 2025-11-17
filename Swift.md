@@ -59,3 +59,6 @@ Key Differences:
 - `class` instances can be used with Objective-C runtime (@objc, dynamic) when appropriate.
 - `class` is the base of Object Oriented Programming(OOP), `struct` is base of Protocol Oriented Programming(POP)
 
+# Optionals & Error Handling
+
+### 
