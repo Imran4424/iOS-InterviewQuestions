@@ -74,3 +74,5 @@ Optionals are not pointers; they are essentially an enumeration with two cases, 
 - Forces you to handle absence of a value explicitly, reducing runtime crashes like “null pointer exceptions”
 
 We can unwrapped optional values using `if let`, `guard let`, optional chaining, nil coalescing operator `??`, or (carefully) `!`.
+
+
