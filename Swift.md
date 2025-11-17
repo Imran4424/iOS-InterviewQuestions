@@ -40,5 +40,4 @@ let point = Coordinate(x: 10, y: 20) // The 'point' instance is constant
 // This causes a compile-time error:
 // point.x = 15
 // error: cannot assign to property: 'point' is a 'let' constant
-
 ```
