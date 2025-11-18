@@ -140,3 +140,4 @@ Error handling is the process of responding to and recovering from errors or une
 
 ### How does Swift handle errors? What’s the difference between `try?`, `try!`, and `try`?
 
+Swift handles errors using a system of throwing, catching, propagating, and manipulating recoverable errors at runtime.
