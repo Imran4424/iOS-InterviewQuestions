@@ -158,3 +158,12 @@ The `try`, `try?`, and `try!` keywords are used when calling a function that is 
 
 #### `try`
 
+Error is propagated and must be handled by a surrounding `do-catch` statement or the calling function (if it's also a throwing function).
+
+**When to  use**
+
+When you need to handle specific errors and potentially recover from them, or when you want to provide user feedback based on the error.
+
+#### `try?`
+
+f an error is thrown, the result is `nil`; otherwise, the result is an optional containing the return value.
