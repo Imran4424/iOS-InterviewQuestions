@@ -222,5 +222,5 @@ Automatic Reference Counting (ARC) is Swift's automated memory management system
 
 #### Reference Counting
 
-Every time we create a new instance of a class, ARC allocates a chunk of memory to store information about that instance. This memory holds information about the type of the instance, together with the values of any stored properties associated with that instance.
+Every time we create a new instance of a class, ARC allocates a chunk of memory to store information about that instance. This memory holds information about the type of the instance, together with the values of any stored properties associated with that instance and places a "strong reference" to it in a property, constant, or variable.
 
