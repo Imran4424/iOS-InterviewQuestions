@@ -241,3 +241,6 @@ Automatic Reference Counting (ARC) applies only to class instances (reference ty
 While Automatic Reference Counting (ARC) handles memory automatically in most scenarios, a problem can arise with **strong reference cycles (also known as retain cycles)**. A strong reference cycle occurs when two or more objects hold strong references to each other, preventing their reference counts from ever reaching zero and causing a **memory leak**.
 
 To resolve these, Swift provides two alternative reference types:
+
+#### Weak References
+
