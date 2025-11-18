@@ -218,3 +218,5 @@ let optionalResult = try? processData(path: "") // optionalResult will be nil
 
 Automatic Reference Counting (ARC) is Swift's automated memory management system, used to track and manage the memory used by your app's class instances. In most cases, this means memory management "just works" and we don’t need to think about memory management ourself.
 
+**How Automatic Reference Counting (ARC) works**
+
