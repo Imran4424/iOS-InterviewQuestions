@@ -179,3 +179,4 @@ Force unwraps the result; if an error is thrown, the app will crash with a runti
 
 **When to  use**
 
+Only when you are absolutely certain the operation will not fail (e.g., loading an image from a guaranteed-to-exist asset in your app bundle). Use with extreme caution.
