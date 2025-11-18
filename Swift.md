@@ -211,3 +211,5 @@ let optionalResult = try? processData(path: "") // optionalResult will be nil
 // Using 'try!' (will crash if an error is thrown)
 // let guaranteedResult = try! processData(path: "") 
 ```
+
+# ARC & Memory Management
