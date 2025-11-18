@@ -136,7 +136,7 @@ Error handling is the process of responding to and recovering from errors or une
   - **Retrying the operation:** Attempting the task again.
   - **Providing a fallback:** Using a default value or alternative option.
   - **Cleaning up resources:** Releasing any resources that were acquired, even if an error occurred (often using a `finally` clause).
-  - **Isolating the failure:** Preventing a failing component from bringing down the entire system. 
+  - **Isolating the failure:** Preventing a failing component from bringing down the entire system.
 
 ### How does Swift handle errors? What’s the difference between `try?`, `try!`, and `try`?
 
