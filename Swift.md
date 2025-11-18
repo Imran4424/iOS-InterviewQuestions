@@ -182,5 +182,33 @@ Force unwraps the result; if an error is thrown, the app will crash with a runti
 Only when you are absolutely certain the operation will not fail (e.g., loading an image from a guaranteed-to-exist asset in your app bundle). Use with extreme caution.
 
 ```swift
+enum DataError: Error {
+    case invalidPath
+    case insufficientPermissions
+}
+
+func processData(path: String) throws -> String {
+    // some operations that can throw DataError
+    if path.isEmpty {
+        throw DataError.invalidPath
+    }
+    return "Processed Data"
+}
+
+// Using 'try' with do-catch
+do {
+    let result = try processData(path: "some/path")
+    print("Success: \(result)")
+} catch DataError.invalidPath {
+    print("Error: Invalid file path.")
+} catch {
+    print("An unexpected error occurred: \(error)")
+}
+
+// Using 'try?'
+let optionalResult = try? processData(path: "") // optionalResult will be nil
+
+// Using 'try!' (will crash if an error is thrown)
+// let guaranteedResult = try! processData(path: "") 
 
 ```
