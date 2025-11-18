@@ -149,3 +149,10 @@ Error handling is the process of responding to and recovering from errors or une
 ### How does Swift handle errors? What’s the difference between `try?`, `try!`, and `try`?
 
 Swift handles errors using a system of throwing, catching, propagating, and manipulating recoverable errors at runtime.
+
+Errors are represented by types that conform to the `Error` protocol, often using an `enum` for specific error conditions.
+
+Functions that can produce an error are marked with the `throws` keyword in their declaration.
+
+The `try`, `try?`, and `try!` keywords are used when calling a function that is marked as `throws` to specify how potential errors should be handled:
+
