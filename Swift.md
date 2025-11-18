@@ -126,5 +126,17 @@ func process(middleName: String?) {
 
 ### What is error handling?
 
+Error handling is the process of responding to and recovering from errors or unexpected issues that occur during a program's execution to prevent it from crashing or failing unexpectedly.
+
+#### Key components of error handling
+
+- **Error detection:** Identifying when an error has occurred, such as a file not being found or a network request failing.
+- **Error reporting:** Informing the user or system administrator about the error, often through error codes, logs, or user-friendly messages.
+- **Error recovery:** Implementing a strategy to deal with the error, which could include:
+  - **Retrying the operation:** Attempting the task again.
+  - **Providing a fallback:** Using a default value or alternative option.
+  - **Cleaning up resources:** Releasing any resources that were acquired, even if an error occurred (often using a `finally` clause).
+  - **Isolating the failure:** Preventing a failing component from bringing down the entire system. 
+
 ### How does Swift handle errors? What’s the difference between `try?`, `try!`, and `try`?
 
