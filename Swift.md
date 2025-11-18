@@ -156,3 +156,5 @@ Functions that can produce an error are marked with the `throws` keyword in thei
 
 The `try`, `try?`, and `try!` keywords are used when calling a function that is marked as `throws` to specify how potential errors should be handled:
 
+#### `try`
+
