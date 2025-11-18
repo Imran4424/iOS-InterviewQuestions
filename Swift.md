@@ -234,4 +234,4 @@ As long as at least one strong reference to an instance exists, Automatic Refere
 
 #### Scope
 
-Automatic Reference Counting (ARC) applies only to class instances (reference types). Value types like structures and enumerations are not managed by ARC; their memory is typically managed on the stack
+Automatic Reference Counting (ARC) applies only to class instances (reference types). Value types like structures and enumerations are not managed by ARC; their memory is typically managed on the stack.
