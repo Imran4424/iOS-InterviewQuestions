@@ -247,3 +247,8 @@ To resolve these, Swift provides two alternative reference types:
 Declared with the `weak` keyword, a weak reference does not keep a strong hold on the instance it refers to, so it doesn't prevent deallocation. A weak reference must be an optional type because the referenced object can be deallocated and the reference automatically set to `nil` at any time. Use weak references when the other instance has a shorter lifetime.
 
 #### Unowned References
+
+Declared with the `unowned` keyword, an unowned reference also does not keep a strong hold on the instance. Unlike a weak reference, an unowned reference is a non-optional type and is used when you are certain the referenced instance will always have a value and has the same or a longer lifetime than the referencing object. Accessing an unowned reference after its instance has been deallocated will cause a runtime error.
+
+
+### Strong References vs `weak` References vs `unowned`
