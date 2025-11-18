@@ -138,6 +138,14 @@ Error handling is the process of responding to and recovering from errors or une
   - **Cleaning up resources:** Releasing any resources that were acquired, even if an error occurred (often using a `finally` clause).
   - **Isolating the failure:** Preventing a failing component from bringing down the entire system.
 
+
+#### Benefits of proper error handling
+
+- **Increased reliability:** Programs are more stable and less likely to crash.
+- **Better user experience:** Users are less likely to be frustrated by unexpected failures.
+- **Improved security:** Properly handling errors can prevent vulnerabilities that could be exploited by attackers.
+- **Easier debugging:** Detailed error logs make it simpler for developers to find and fix problems. 
+
 ### How does Swift handle errors? What’s the difference between `try?`, `try!`, and `try`?
 
 Swift handles errors using a system of throwing, catching, propagating, and manipulating recoverable errors at runtime.
