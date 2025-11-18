@@ -230,7 +230,7 @@ Automatic Reference Counting (ARC) keeps track of the number of strong reference
 
 #### Deallocation
 
-As long as at least one strong reference to an instance exists, ARC will not deallocate it. When the last strong reference is removed (e.g., a variable is set to nil or goes out of scope), ARC automatically deallocates the instance's memory, freeing up resources.
+As long as at least one strong reference to an instance exists, Automatic Reference Counting (ARC) will not deallocate it. When the last strong reference is removed (e.g., a variable is set to nil or goes out of scope), ARC automatically deallocates the instance's memory, freeing up resources.
 
 #### Scope
 
