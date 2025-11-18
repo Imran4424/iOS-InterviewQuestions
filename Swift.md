@@ -220,3 +220,5 @@ Automatic Reference Counting (ARC) is Swift's automated memory management system
 
 **How Automatic Reference Counting (ARC) works**
 
+#### Reference Counting
+
