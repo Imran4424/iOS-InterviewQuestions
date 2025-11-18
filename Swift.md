@@ -170,6 +170,6 @@ If an error is thrown, the result is `nil`; otherwise, the result is an optional
 
 **When to  use**
 
-
+When you don't care about the specific error that occurred and just want to know if the operation succeeded or not (e.g., in a guard let statement).
 
 
