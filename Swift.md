@@ -167,4 +167,4 @@ When you need to handle specific errors and potentially recover from them, or wh
 
 #### `try?`
 
-f an error is thrown, the result is `nil`; otherwise, the result is an optional containing the return value.
+If an error is thrown, the result is `nil`; otherwise, the result is an optional containing the return value.
