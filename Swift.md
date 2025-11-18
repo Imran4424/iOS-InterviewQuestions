@@ -212,7 +212,7 @@ let optionalResult = try? processData(path: "") // optionalResult will be nil
 // let guaranteedResult = try! processData(path: "") 
 ```
 
-# Automatic Reference Counting(ARC) & Memory Management
+# Automatic Reference Counting (ARC) & Memory Management
 
 ### What is Automatic Reference Counting(ARC) in Swift?
 
