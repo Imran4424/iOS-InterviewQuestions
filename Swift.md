@@ -212,4 +212,4 @@ let optionalResult = try? processData(path: "") // optionalResult will be nil
 // let guaranteedResult = try! processData(path: "") 
 ```
 
-# (ARC) & Memory Management
+# Automatic (ARC) & Memory Management
