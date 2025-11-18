@@ -228,3 +228,4 @@ Every time we create a new instance of a class, ARC allocates a chunk of memory 
 
 Automatic Reference Counting (ARC) keeps track of the number of strong references to each object. A strong reference prevents an instance from being deallocated.
 
+####
