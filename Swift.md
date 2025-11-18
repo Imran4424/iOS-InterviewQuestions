@@ -177,3 +177,5 @@ When you don't care about the specific error that occurred and just want to know
 
 Force unwraps the result; if an error is thrown, the app will crash with a runtime error.
 
+**When to  use**
+
