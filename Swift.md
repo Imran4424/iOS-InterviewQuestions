@@ -124,3 +124,4 @@ func process(middleName: String?) {
 }
 ```
 
+### How does Swift handle errors? What’s the difference between `try?`, `try!`, and `try`?
