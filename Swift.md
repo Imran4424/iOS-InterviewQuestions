@@ -268,6 +268,13 @@ A weak reference is used to solve strong reference cycles.
 
 **Function:** A weak reference does not increment the instance's reference count based on its usage count.
 
+**Characteristics:**
+- It must be declared as a variable (`var`) because its value needs to be changeable (set to `nil`).
+- It must be an `Optional` type because the object it points to might be deallocated at any time, in which case the reference automatically becomes `nil`. 
+
+**Purpose:** Use weak references when the referenced object can be deallocated independently, typically for a relationship where one object "owns" the other but the "owned" object does not need to own its "owner" back (e.g., a `Person` might strongly own a CreditCard, but the `CreditCard` should only weakly reference the `Person`).
+
+
 
 
 
