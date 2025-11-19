@@ -276,9 +276,9 @@ A weak reference is used to solve strong reference cycles.
 
 #### `unowned` References
 
+An `unowned` reference is also used to solve strong reference cycles in specific situations.
 
-
-
+**Function:** Like a weak reference, it does not increment the instance's reference count.
 
 
 
