@@ -260,6 +260,10 @@ A strong reference is the default type of reference in Swift. When you create a 
 
 **Purpose:** This ensures that objects required by your program remain in memory as long as they are needed.
 
+**Caution:** Strong references can lead to strong reference cycles (retain cycles) if two objects strongly refer to each other, causing a memory leak because neither object's reference count can reach zero.
+
+
+
 
 
 
