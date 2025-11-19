@@ -287,8 +287,8 @@ An `unowned` reference is also used to solve strong reference cycles in specific
 
 **Purpose:** Use unowned references when the other instance has the same or a longer lifespan. A common use case is a closure capturing `self` where `self` and the closure always deallocate at the same time.
 
-
-
+| Reference Type | Contributes to Reference Count? | Optional? | Behavior When Object is Deallocated | When to Use | 
+| -------------- | -------------- | -------------- | -------------- | -------------- | 
 
 
 
