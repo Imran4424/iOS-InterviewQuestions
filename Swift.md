@@ -280,6 +280,10 @@ An `unowned` reference is also used to solve strong reference cycles in specific
 
 **Function:** Like a weak reference, it does not increment the instance's reference count.
 
+**Characteristics:**
+- It is used when you know the reference will never be nil once it has been set.
+- It is declared as a non-optional type.
+- Attempting to access an unowned reference after the object it points to has been deallocated will cause a runtime crash.
 
 
 
