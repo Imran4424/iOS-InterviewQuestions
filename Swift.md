@@ -252,6 +252,9 @@ Declared with the `unowned` keyword, an unowned reference also does not keep a s
 
 ### Strong References vs `weak` References vs `unowned` Reference
 
+#### Strong Reference
+
+A strong reference increments the object's reference count. As long as at least one strong reference exists, the object remains in memory.
 
 
 
