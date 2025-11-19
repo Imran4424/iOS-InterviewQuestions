@@ -285,7 +285,7 @@ An `unowned` reference is also used to solve strong reference cycles in specific
 - It is declared as a non-optional type.
 - Attempting to access an unowned reference after the object it points to has been deallocated will cause a runtime crash.
 
-
+**Purpose:** Use unowned references when the other instance has the same or a longer lifespan. A common use case is a closure capturing `self` where `self` and the closure always deallocate at the same time.
 
 
 
