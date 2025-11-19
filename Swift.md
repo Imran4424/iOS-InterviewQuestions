@@ -250,7 +250,7 @@ Declared with the `weak` keyword, a weak reference does not keep a strong hold o
 
 Declared with the `unowned` keyword, an unowned reference also does not keep a strong hold on the instance. Unlike a weak reference, an unowned reference is a non-optional type and is used when you are certain the referenced instance will always have a value and has the same or a longer lifetime than the referencing object. Accessing an unowned reference after its instance has been deallocated will cause a runtime error.
 
-### Strong References vs `weak` References vs `unowned`
+### Strong References vs `weak` References vs `unowned` Reference
 
 
 
