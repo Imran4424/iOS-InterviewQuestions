@@ -258,6 +258,7 @@ A strong reference is the default type of reference in Swift. When you create a 
 
 **Function:** A strong reference increments the instance's reference count based on your usage count. As long as there is at least one strong reference to an object, ARC will not deallocate it.
 
+Purpose: This ensures that objects required by your program remain in memory as long as they are needed.
 
 
 
