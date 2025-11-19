@@ -254,8 +254,9 @@ Declared with the `unowned` keyword, an unowned reference also does not keep a s
 
 #### Strong Reference
 
-A strong reference increments the object's reference count. As long as at least one strong reference exists, the object remains in memory.
+A strong reference is the default type of reference in Swift. When you create a property, constant, or variable that refers to a class instance, it is a strong reference by default.
 
+**Function:** A strong reference increments the instance's reference count based on your usage count. As long as there is at least one strong reference to an object, ARC will not deallocate it.
 
 
 
