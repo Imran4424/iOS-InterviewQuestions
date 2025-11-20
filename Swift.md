@@ -411,3 +411,17 @@ unit4A!.tenant = john
 Now, there is no retain cycle
 
 ![No Retain Cycle](WeakDark.png)
+
+```swift
+john = nil
+// Prints "John Appleseed is being deinitialized".
+```
+
+![Person Deallocated](PersonDeallocated.png)
+
+```swift
+unit4A = nil
+// Prints "Apartment 4A is being deinitialized".
+```
+
+![Both Deallocated](BothDeallocated.png)
