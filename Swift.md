@@ -295,3 +295,5 @@ An `unowned` reference is also used to solve strong reference cycles in specific
 
 
 ### What is a retain cycle? How do you break it?
+
+A retain cycle happens when two (or more) reference types hold strong references to each other, so their reference counts never reach zero.
