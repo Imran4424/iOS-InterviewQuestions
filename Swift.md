@@ -316,9 +316,15 @@ A retain cycle happens when two (or more) reference types hold strong references
 ```swift
 class Person {
     let name: String
-    init(name: String) { self.name = name }
     var apartment: Apartment?
-    deinit { print("\(name) is being deinitialized") }
+
+    init(name: String) { 
+        self.name = name     
+    }
+
+    deinit { 
+        print("\(name) is being deinitialized") 
+    }
 }
 
 class Apartment {
