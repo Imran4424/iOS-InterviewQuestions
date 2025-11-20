@@ -365,3 +365,5 @@ unit4A = nil
 Retain cycle persists
 
 ![RetainCycle](StrongReference_Dark.png)
+
+The strong references between the Person instance and the Apartment instance remain and can’t be broken.
