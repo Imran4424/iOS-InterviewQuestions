@@ -407,3 +407,7 @@ unit4A = Apartment(unit: "4A")
 john!.apartment = unit4A
 unit4A!.tenant = john
 ```
+
+Now, there is no retain cycle
+
+![No Retain Cycle](WeakDark.png)
