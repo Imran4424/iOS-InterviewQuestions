@@ -351,5 +351,13 @@ john!.apartment = unit4A
 unit4A!.tenant = john
 ```
 
+The above code creates retain cycle
 
 ![RetainCycle](StrongReference_Dark.png)
+
+Even after executing the following codes the objects will not be deinitialized
+
+```swift
+john = nil
+unit4A = nil
+```
