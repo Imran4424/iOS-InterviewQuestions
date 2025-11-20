@@ -361,3 +361,7 @@ Even after executing the following codes the objects will not be deinitialized
 john = nil
 unit4A = nil
 ```
+
+Retain cycle persists
+
+![RetainCycle](StrongReference_Dark.png)
