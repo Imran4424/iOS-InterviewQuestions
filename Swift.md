@@ -425,3 +425,5 @@ unit4A = nil
 ```
 
 ![Both Deallocated](BothDeallocated.png)
+
+### When would you use `weak` vs `unowned`?
