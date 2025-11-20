@@ -294,4 +294,4 @@ An `unowned` reference is also used to solve strong reference cycles in specific
 | `unowned` | No | No (non-optional) | Causes a runtime crash if accessed after the object is deallocated. | When the referenced object has the same or a longer lifespan. Used to break retain cycles when the reference is guaranteed to always be valid. | 
 
 
-
+### What is a retain cycle? How do you break it?
