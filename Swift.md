@@ -330,8 +330,14 @@ class Person {
 
 class Apartment {
     let unit: String
-    init(unit: String) { self.unit = unit }
     var tenant: Person?
-    deinit { print("Apartment \(unit) is being deinitialized") }
+
+    init(unit: String) { 
+        self.unit = unit 
+    }
+    
+    deinit { 
+        print("Apartment \(unit) is being deinitialized") 
+    }
 }
 ```
