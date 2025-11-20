@@ -290,8 +290,8 @@ An `unowned` reference is also used to solve strong reference cycles in specific
 | Reference Type | Contributes to Reference Count? | Optional? | Behavior When Object is Deallocated | When to Use | 
 | -------------- | -------------- | -------------- | -------------- | -------------- | 
 | Strong | Yes | No | Prevents deallocation; object remains in memory. | The default. Use for standard ownership where you need the object to persist.|
-| Weak | No | Yes (must be `Optional`) | Automatically sets the reference to `nil` when the object is deallocated. | When the referenced object has a shorter or independent lifespan. Used to break retain cycles. |
-| Unowned | No | No (non-optional) | Causes a runtime crash if accessed after the object is deallocated. | When the referenced object has the same or a longer lifespan. Used to break retain cycles when the reference is guaranteed to always be valid. | 
+| `weak` | No | Yes (must be `Optional`) | Automatically sets the reference to `nil` when the object is deallocated. | When the referenced object has a shorter or independent lifespan. Used to break retain cycles. |
+| `unowned` | No | No (non-optional) | Causes a runtime crash if accessed after the object is deallocated. | When the referenced object has the same or a longer lifespan. Used to break retain cycles when the reference is guaranteed to always be valid. | 
 
 
 
