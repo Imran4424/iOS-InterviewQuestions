@@ -350,3 +350,6 @@ unit4A = Apartment(unit: "4A")
 john!.apartment = unit4A
 unit4A!.tenant = john
 ```
+
+
+![RetainCycle](StrongReference_Dark.png)
