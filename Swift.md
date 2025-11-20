@@ -262,6 +262,19 @@ A strong reference is the default type of reference in Swift. When you create a 
 
 **Caution:** Strong references can lead to strong reference cycles (retain cycles) if two objects strongly refer to each other, causing a memory leak because neither object's reference count can reach zero.
 
+```swift
+class Person {
+    let name: String
+    init(name: String) {
+        self.name = name
+        print("\(name) is being initialized")
+    }
+    deinit {
+        print("\(name) is being deinitialized")
+    }
+}
+```
+
 #### `weak` References
 
 A weak reference is used to solve strong reference cycles.
@@ -297,3 +310,4 @@ An `unowned` reference is also used to solve strong reference cycles in specific
 ### What is a retain cycle? How do you break it?
 
 A retain cycle happens when two (or more) reference types hold strong references to each other, so their reference counts never reach zero.
+
