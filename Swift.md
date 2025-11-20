@@ -319,7 +319,8 @@ class Person {
     var apartment: Apartment?
 
     init(name: String) { 
-        self.name = name     
+        self.name = name
+        print("\(name) is being initialized")   
     }
 
     deinit { 
