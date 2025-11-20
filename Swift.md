@@ -265,10 +265,12 @@ A strong reference is the default type of reference in Swift. When you create a 
 ```swift
 class Person {
     let name: String
+    
     init(name: String) {
         self.name = name
         print("\(name) is being initialized")
     }
+
     deinit {
         print("\(name) is being deinitialized")
     }
