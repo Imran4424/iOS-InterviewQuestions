@@ -516,9 +516,6 @@ This can be shortened using type inference and an implicit return for single-exp
 
 ```swift
 let add = { (a, b) in a + b }
-// Or even shorter with shorthand argument names:
-let add: (Int, Int) -> Int = { $0 + $1 }
-
 add(5, 6)
 ```
 
