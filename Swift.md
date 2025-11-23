@@ -581,7 +581,7 @@ The term "escaping" refers to the closure's ability to "escape" the scope of the
 
 In Swift, closures are non-escaping by default, which means they must be executed within the body of the function they are passed to, and the compiler ensures their memory is cleaned up as soon as the function returns.
 
-When you mark a closure parameter with the `@escaping` attribute, you are explicitly telling the compiler that the closure's execution might be deferred or stored for later use.
+When we mark a closure parameter with the `@escaping` attribute, we are explicitly telling the compiler that the closure's execution might be deferred or stored for later use.
 
 #### How Escaping Closures Work
 
@@ -596,7 +596,7 @@ Step by Step breakdown of how escaping closures work
 
 #### Common Use Cases
 
-- **Asynchronous Operations:** Network requests are a classic example. You start a data fetch in a function, but the closure that processes the data (the completion handler) can only run when the network response returns, which might be seconds later.
+- **Asynchronous Operations:** Network requests are a classic example. Start a data fetch in a function, but the closure that processes the data (the completion handler) can only run when the network response returns, which might be seconds later.
 - **Delegates and Callbacks:** Storing a closure as a property of a class to be used as a callback mechanism.
 - **Dispatch Queues:** Executing a closure on a background thread using.
 - **Animations:** Providing a block of code to run once an animation has completed.
