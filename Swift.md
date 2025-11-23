@@ -623,8 +623,7 @@ Because escaping closures can hold strong references to self within a class inst
 
 When we use an escaping closure within a class method, the compiler requires us to explicitly reference self, often forcing us to use a capture list (`[weak self]`) to break potential retain cycles and prevent memory leaks.
 
-
-
+# Protocols & Protocol-Oriented Programming
 
 
 
