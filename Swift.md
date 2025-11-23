@@ -671,6 +671,6 @@ struct Bicycle: Drivable {
 
 Swift Protocols also support
 
-- Protocol Extension: For Default Implementation
-- Protocol Inheritance
-- Protocol Composition
+- **Protocol Extension:** For Default Implementation
+- **Protocol Inheritance**
+- **Protocol Composition**
