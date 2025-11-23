@@ -602,7 +602,19 @@ Step by Step breakdown of how escaping closures work
 - **Animations:** Providing a block of code to run once an animation has completed.
 
 ```swift
+var completionHandlers: [() -> Void] = []
 
+// The function needs `@escaping` because the closure is stored in an array 
+// and will be executed *after* the `someFunctionWithEscapingClosure` returns.
+func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
+    completionHandlers.append(completionHandler)
+    // The function immediately returns, but the closure lives on in the array.
+}
+
+// In contrast, this non-escaping closure runs immediately inside the function's scope.
+func someFunctionWithNonEscapingClosure(closure: () -> Void) {
+    closure()
+}
 ```
 
 
