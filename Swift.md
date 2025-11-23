@@ -581,7 +581,7 @@ The term "escaping" refers to the closure's ability to "escape" the scope of the
 
 In Swift, closures are non-escaping by default, which means they must be executed within the body of the function they are passed to, and the compiler ensures their memory is cleaned up as soon as the function returns.
 
-
+When you mark a closure parameter with the @escaping attribute, you are explicitly telling the compiler that the closure's execution might be deferred or stored for later use.
 
 
 
