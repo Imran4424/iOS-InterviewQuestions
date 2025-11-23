@@ -677,6 +677,6 @@ Swift Protocols also support
 
 ### What is protocol-oriented programming (POP) in Swift?
 
-
+Protocol oriented programming is a protocol first approach instead of class first approach of Object oriented Programming.
 
 [Protocols Oriented Programming in Details](https://github.com/Imran4424/SwiftProblemNSolution/blob/master/25.ProtocolOrientedProgramming/ProtocolOrientedProgramming.md)
