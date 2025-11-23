@@ -460,5 +460,8 @@ class Person {
 
 - The referenced object is guaranteed to be non-`nil` and has a lifetime that is the same length or longer than the object holding the reference (non-optional relationship).
 - Since it's non-optional, it doesn't have the overhead of optional unwrapping or automatically being set to `nil`.
-- 
+- Common Scenarios
+  - **Guaranteed Parent/Child Links:** A parent object might own a child object, and the child holds an `unowned` reference back to the parent, because the parent will always exist as long as the child does.
+  - **Closures:** When capturing `self` in a closure where the closure and `self` will always be deallocated at the same time (captured via `[unowned self]` in the capture list).
+
 
