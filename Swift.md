@@ -428,3 +428,4 @@ unit4A = nil
 
 ### When would you use `weak` vs `unowned`?
 
+You would use `weak` versus `unowned` based on the lifetimes and ownership relationship between the two related class instances in your code. Both are used to break strong reference cycles, but they handle the potential absence of the referenced object differently.
