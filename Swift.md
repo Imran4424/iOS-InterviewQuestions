@@ -625,7 +625,7 @@ When we use an escaping closure within a class method, the compiler requires us 
 
 # Protocols & Protocol-Oriented Programming
 
-
+### What is a protocol in Swift?
 
 
 
