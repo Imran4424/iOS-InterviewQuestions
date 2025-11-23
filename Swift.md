@@ -691,6 +691,8 @@ Protocol-Oriented Programming (POP) emphasis on these pilar along with value typ
 
 ### What is protocol extension and why is it useful?
 
+A protocol extension adds default implementations of methods and computed properties to a protocol, allowing any type that conforms to the protocol to automatically gain that functionality.
+
 
 
 
