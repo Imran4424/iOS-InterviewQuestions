@@ -693,7 +693,7 @@ Protocol-Oriented Programming (POP) emphasis on these pilar along with value typ
 
 A protocol extension adds default implementations of methods and computed properties to a protocol, allowing any type that conforms to the protocol to automatically gain that functionality.
 
-
+This is useful for promoting code reuse, creating a single source of truth for common behavior, and allowing conforming types to provide their own custom implementations or use the defaults provided.
 
 
 
