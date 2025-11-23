@@ -594,6 +594,8 @@ Step by Step breakdown of how escaping closures work
 3. **Closure is Stored or Deferred:** The closure is stored somewhere outside the function's scope—perhaps in a property of a class instance, or on a different execution queue (like a background thread).
 4. **Closure Executes Later:** The closure is executed at a later time, long after the original function call is finished.
 
+#### Common Use Cases
+
 
 
 
