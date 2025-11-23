@@ -638,8 +638,12 @@ protocol Drivable {
     func accelerate(by amount: Double)
 }
 
-struct Car: Drivable {
+class Car: Drivable {
     var speed: Double = 0.0
+
+    init(speed: Double) {
+        
+    }
 
     func startEngine() {
         print("Car engine started.")
