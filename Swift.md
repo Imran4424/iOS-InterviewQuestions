@@ -591,5 +591,7 @@ Step by Step breakdown of how escaping closures work
 
 1. **Function Call:** A function is called with an escaping closure as an argument.
 2. **Function Returns:** The function finishes its immediate execution and returns to the caller.
+3. **Closure is Stored or Deferred:** The closure is stored somewhere outside the function's scope—perhaps in a property of a class instance, or on a different execution queue (like a background thread).
+4. **Closure Executes Later:** The closure is executed at a later time, long after the original function call is finished.
 
 
