@@ -713,7 +713,7 @@ struct Order: Entity {
 }
 ```
 
-
+### What is “protocol with associatedtype” and why is it tricky?
 
 
 
