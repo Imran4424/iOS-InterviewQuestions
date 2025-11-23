@@ -575,6 +575,8 @@ In a nutshell, `weak` and `unowned` do the same thing but in case of unowned we 
 
 ### What does “escaping closure” mean?
 
-An escaping closure is a closure that is called after the function it was passed into has returned. The term "escaping" refers to the closure's ability to "escape" the scope of the function body it was defined within.
+An escaping closure is a closure that is called after the function it was passed into has returned. 
+
+The term "escaping" refers to the closure's ability to "escape" the scope of the function body it was defined within.
 
 
