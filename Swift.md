@@ -442,6 +442,13 @@ Use `weak` when
 A `weak` reference must be a `var` optional type in Swift:
 
 ```swift
+class Person {
+    var name: String
+    weak var apartment: Apartment? // Apartment can be nil
+    init(name: String) { self.name = name }
+    deinit { print("\(name) is being deinitialized") }
+}
+
 ```
 
 
