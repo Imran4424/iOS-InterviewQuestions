@@ -505,5 +505,10 @@ A closure is a self-contained block of functionality that can be passed around a
 A simple closure that takes two integers and returns their sum:
 
 ```swift
+let add: (Int, Int) -> Int = { (a, b) in
+    return a + b
+}
+let result = add(5, 6)
+// result is 11
 ```
 
