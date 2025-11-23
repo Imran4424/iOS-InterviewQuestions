@@ -601,7 +601,8 @@ Step by Step breakdown of how escaping closures work
 - **Dispatch Queues:** Executing a closure on a background thread using.
 - **Animations:** Providing a block of code to run once an animation has completed.
 
-```
+```swift
+
 ```
 
 
