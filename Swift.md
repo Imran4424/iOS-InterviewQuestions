@@ -497,3 +497,8 @@ A closure is a self-contained block of functionality that can be passed around a
 - **Syntactic Flexibility:** Swift offers several syntax optimizations for writing closures in a brief and clear style, including inferring types from context, implicit returns for single-expression closures, shorthand argument names (like `$0`, `$1`), and trailing closure syntax.
 
 #### Common Uses
+
+
+
+
+
