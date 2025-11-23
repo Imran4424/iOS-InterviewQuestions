@@ -502,5 +502,8 @@ A closure is a self-contained block of functionality that can be passed around a
 - **Higher-Order Functions:** They are used with methods like `map()`, `filter()`, and `sorted(by:)` to provide custom behavior for operations on collections (e.g., sorting an array in a specific order).
 - **UI Event Handling:** In frameworks like SwiftUI, closures define the actions that occur when a user interacts with a UI element, such as tapping a Button. 
 
+A simple closure that takes two integers and returns their sum:
 
+```swift
+```
 
