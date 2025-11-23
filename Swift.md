@@ -494,6 +494,6 @@ A closure is a self-contained block of functionality that can be passed around a
 
 - **First-Class Types:** Closures in Swift are first-class citizens, meaning they can be assigned to variables or constants, passed as arguments to functions, and returned from functions, just like a `String` or an `Int`.
 - **Capturing Values:** A key feature is their ability to "close over" and access variables from their surrounding scope, even after the original scope has ceased to exist. Swift automatically handles the memory management for this.
+- **Syntactic Flexibility:** Swift offers several syntax optimizations for writing closures in a brief and clear style, including inferring types from context, implicit returns for single-expression closures, shorthand argument names (like `$0`, `$1`), and trailing closure syntax.
 
-
-
+#### Common Uses
