@@ -536,6 +536,12 @@ The primary reasons for using a capture list are to:
 
 The capture list is placed at the very beginning of the closure expression
 
+```swift
+let closure = { [capture list] (parameters) -> returnType in
+    // Closure body
+}
+```
+
 
 
 
