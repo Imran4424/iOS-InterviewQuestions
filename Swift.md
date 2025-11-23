@@ -429,3 +429,12 @@ unit4A = nil
 ### When would you use `weak` vs `unowned`?
 
 You would use `weak` versus `unowned` based on the lifetimes and ownership relationship between the two related class instances in your code. Both are used to break strong reference cycles, but they handle the potential absence of the referenced object differently.
+
+Use `weak` when 
+
+- The referenced object can be `nil` (optional relationship) or has a shorter lifetime than the object holding the reference
+- The connection between the two objects does not have to exist at all times.
+- You need the reference to be automatically set to `nil` if the target object is deallocated first. This prevents potential crashes.
+- Common Scenarios:
+  - **Delegation Patterns:** The "delegate" (child) should not own the "delegator" (parent).
+  - **Closures:** When capturing `self` in a closure where `self` might be released before the closure finishes executing (captured via `[weak self]` in the capture list).
