@@ -71,11 +71,11 @@ An Optional in Swift is a type that safely handles the absence of a value. An op
 Optionals are not pointers; they are essentially an enumeration with two cases, `some(Value)` or `none`, which the compiler uses to enforce safety
 
 - Type: `T?` means “either a value of type `T` or `nil`”
-- Forces you to handle absence of a value explicitly, reducing runtime crashes like “null pointer exceptions”
+- Forces us to handle absence of a value explicitly, reducing runtime crashes like “null pointer exceptions”
 
 We can unwrapped optional values using `if let`, `guard let`, optional chaining, nil coalescing operator `??`, or (carefully) `!`.
 
-### When do you use `guard let` vs `if let`?
+### When do we use `guard let` vs `if let`?
 
 #### `guard Let`
 
@@ -119,7 +119,7 @@ func process(middleName: String?) {
         print("No middle name provided.")
     }
 
-    // You cannot use 'name' here.
+    // we cannot use 'name' here.
     print("Process finished.")
 }
 ```
@@ -162,7 +162,7 @@ Error is propagated and must be handled by a surrounding `do-catch` statement or
 
 **When to  use**
 
-When you need to handle specific errors and potentially recover from them, or when you want to provide user feedback based on the error.
+When we need to handle specific errors and potentially recover from them, or when we want to provide user feedback based on the error.
 
 #### `try?`
 
@@ -170,7 +170,7 @@ If an error is thrown, the result is `nil`; otherwise, the result is an optional
 
 **When to  use**
 
-When you don't care about the specific error that occurred and just want to know if the operation succeeded or not (e.g., in a `guard let` statement).
+When we don't care about the specific error that occurred and just want to know if the operation succeeded or not (e.g., in a `guard let` statement).
 
 
 #### `try!`
@@ -179,7 +179,7 @@ Force unwraps the result; if an error is thrown, the app will crash with a runti
 
 **When to  use**
 
-Only when you are absolutely certain the operation will not fail (e.g., loading an image from a guaranteed-to-exist asset in your app bundle). Use with extreme caution.
+Only when we are absolutely certain the operation will not fail (e.g., loading an image from a guaranteed-to-exist asset in our app bundle). Use with extreme caution.
 
 ```swift
 enum DataError: Error {
@@ -216,7 +216,7 @@ let optionalResult = try? processData(path: "") // optionalResult will be nil
 
 ### What is Automatic Reference Counting(ARC) in Swift?
 
-Automatic Reference Counting (ARC) is Swift's automated memory management system, used to track and manage the memory used by your app's class instances. In most cases, this means memory management "just works" and we don’t need to think about memory management ourself.
+Automatic Reference Counting (ARC) is Swift's automated memory management system, used to track and manage the memory used by our app's class instances. In most cases, this means memory management "just works" and we don’t need to think about memory management ourself.
 
 **How Automatic Reference Counting (ARC) works**
 
@@ -248,17 +248,17 @@ Declared with the `weak` keyword, a weak reference does not keep a strong hold o
 
 #### Unowned References
 
-Declared with the `unowned` keyword, an unowned reference also does not keep a strong hold on the instance. Unlike a weak reference, an unowned reference is a non-optional type and is used when you are certain the referenced instance will always have a value and has the same or a longer lifetime than the referencing object. Accessing an unowned reference after its instance has been deallocated will cause a runtime error.
+Declared with the `unowned` keyword, an unowned reference also does not keep a strong hold on the instance. Unlike a weak reference, an unowned reference is a non-optional type and is used when we are certain the referenced instance will always have a value and has the same or a longer lifetime than the referencing object. Accessing an unowned reference after its instance has been deallocated will cause a runtime error.
 
 ### Strong References vs `weak` References vs `unowned` Reference
 
 #### Strong Reference
 
-A strong reference is the default type of reference in Swift. When you create a property, constant, or variable that refers to a class instance, it is a strong reference by default.
+A strong reference is the default type of reference in Swift. When we create a property, constant, or variable that refers to a class instance, it is a strong reference by default.
 
 **Function:** A strong reference increments the instance's reference count based on its usage count. As long as there is at least one strong reference to an object, ARC will not deallocate it.
 
-**Purpose:** This ensures that objects required by your program remain in memory as long as they are needed.
+**Purpose:** This ensures that objects required by our program remain in memory as long as they are needed.
 
 **Caution:** Strong references can lead to strong reference cycles (retain cycles) if two objects strongly refer to each other, causing a memory leak because neither object's reference count can reach zero.
 
@@ -296,7 +296,7 @@ An `unowned` reference is also used to solve strong reference cycles in specific
 **Function:** Like a weak reference, it does not increment the instance's reference count.
 
 **Characteristics:**
-- It is used when you know the reference will never be nil once it has been set.
+- It is used when we know the reference will never be nil once it has been set.
 - It is declared as a non-optional type.
 - Attempting to access an unowned reference after the object it points to has been deallocated will cause a runtime crash.
 
@@ -304,12 +304,12 @@ An `unowned` reference is also used to solve strong reference cycles in specific
 
 | Reference Type | Contributes to Reference Count? | Optional? | Behavior When Object is Deallocated | When to Use | 
 | -------------- | -------------- | -------------- | -------------- | -------------- | 
-| Strong | Yes | No | Prevents deallocation; object remains in memory. | The default. Use for standard ownership where you need the object to persist.|
+| Strong | Yes | No | Prevents deallocation; object remains in memory. | The default. Use for standard ownership where we need the object to persist.|
 | `weak` | No | Yes (must be `Optional`) | Automatically sets the reference to `nil` when the object is deallocated. | When the referenced object has a shorter or independent lifespan. Used to break retain cycles. |
 | `unowned` | No | No (non-optional) | Causes a runtime crash if accessed after the object is deallocated. | When the referenced object has the same or a longer lifespan. Used to break retain cycles when the reference is guaranteed to always be valid. | 
 
 
-### What is a retain cycle? How do you break it?
+### What is a retain cycle? How do we break it?
 
 A retain cycle happens when two (or more) reference types hold strong references to each other, so their reference counts never reach zero.
 
@@ -426,15 +426,15 @@ unit4A = nil
 
 ![Both Deallocated](BothDeallocated.png)
 
-### When would you use `weak` vs `unowned`?
+### When would we use `weak` vs `unowned`?
 
-You would use `weak` versus `unowned` based on the lifetimes and ownership relationship between the two related class instances in your code. Both are used to break strong reference cycles, but they handle the potential absence of the referenced object differently.
+We would use `weak` versus `unowned` based on the lifetimes and ownership relationship between the two related class instances in our code. Both are used to break strong reference cycles, but they handle the potential absence of the referenced object differently.
 
 #### Use `weak` when 
 
 - The referenced object can be `nil` (optional relationship) or has a shorter lifetime than the object holding the reference
 - The connection between the two objects does not have to exist at all times.
-- You need the reference to be automatically set to `nil` if the target object is deallocated first. This prevents potential crashes.
+- We need the reference to be automatically set to `nil` if the target object is deallocated first. This prevents potential crashes.
 - Common Scenarios:
   - **Delegation Patterns:** The "delegate" (child) should not own the "delegator" (parent).
   - **Closures:** When capturing `self` in a closure where `self` might be released before the closure finishes executing (captured via `[weak self]` in the capture list).
@@ -482,7 +482,7 @@ class CreditCard {
 
 ### What is a closure in Swift?
 
-A closure is a self-contained block of functionality that can be passed around and used in your code. It it much like an unnamed function.
+A closure is a self-contained block of functionality that can be passed around and used in swift code. It it much like an unnamed function.
 
 ```swift
 { (parameters) -> returnType in
@@ -527,7 +527,7 @@ add(5, 6)
 
 ### Explain capture lists in closures
 
-A capture list in a Swift closure is a mechanism that allows you to explicitly control how values from the surrounding scope are captured and managed within the closure's memory. It is written as a comma-separated list of items inside square brackets `[]` before the closure's parameter list or the `in` keyword.
+A capture list in a Swift closure is a mechanism that allows us to explicitly control how values from the surrounding scope are captured and managed within the closure's memory. It is written as a comma-separated list of items inside square brackets `[]` before the closure's parameter list or the `in` keyword.
 
 The primary reasons for using a capture list are to:
 
@@ -548,7 +548,7 @@ When dealing with class instances (reference types), the default behavior is a s
 
 #### `weak`
 
-
+This creates a `weak` reference to the instance, which does not keep a strong hold on the object and does not increment its reference count. The captured value becomes an `optional`, allowing it to be set to `nil` automatically if the original object is deallocated. We should use `weak` when the captured reference might become `nil` at some point during the closure's lifetime.
 
 
 
