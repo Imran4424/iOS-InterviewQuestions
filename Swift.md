@@ -459,5 +459,6 @@ class Person {
 #### Use `unowned` when
 
 - The referenced object is guaranteed to be non-`nil` and has a lifetime that is the same length or longer than the object holding the reference (non-optional relationship).
+- Since it's non-optional, it doesn't have the overhead of optional unwrapping or automatically being set to `nil`.
 - 
 
