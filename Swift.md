@@ -629,8 +629,40 @@ When we use an escaping closure within a class method, the compiler requires us 
 
 In Swift, a protocol defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality.
 
-It can be adopted by classes, structs and any other types
+It can be adopted by classes, structs and any other types.
 
+```swift
+protocol Drivable {
+    var speed: Double { get set }
+    func startEngine()
+    func accelerate(by amount: Double)
+}
 
+struct Car: Drivable {
+    var speed: Double = 0.0
+
+    func startEngine() {
+        print("Car engine started.")
+    }
+
+    func accelerate(by amount: Double) {
+        speed += amount
+        print("Car accelerating to \(speed) mph.")
+    }
+}
+
+struct Bicycle: Drivable {
+    var speed: Double = 0.0
+
+    func startEngine() {
+        print("Bicycle does not have an engine.")
+    }
+
+    func accelerate(by amount: Double) {
+        speed += amount / 2 // Bicycles accelerate differently
+        print("Bicycle accelerating to \(speed) mph.")
+    }
+}
+```
 
 
