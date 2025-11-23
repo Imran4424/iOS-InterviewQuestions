@@ -580,3 +580,13 @@ An escaping closure is a closure that is called after the function it was passed
 The term "escaping" refers to the closure's ability to "escape" the scope of the function body it was defined within.
 
 
+
+
+
+
+
+
+
+
+
+
