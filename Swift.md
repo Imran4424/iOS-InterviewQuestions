@@ -492,7 +492,7 @@ A closure is a self-contained block of functionality that can be passed around a
 
 #### Key Characteristics
 
-
+- **First-Class Types:** Closures in Swift are first-class citizens, meaning they can be assigned to variables or constants, passed as arguments to functions, and returned from functions, just like a String or an Int.
 
 
 
