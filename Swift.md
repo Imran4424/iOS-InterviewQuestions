@@ -562,7 +562,12 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
 
 #### `unowned` 
 
-
+```swift
+// Example where 'owner' is guaranteed to exist as long as the 'closure' exists
+let closure = { [unowned owner] in
+    owner.performTask() // No need for optional chaining
+}
+```
 
 
 
