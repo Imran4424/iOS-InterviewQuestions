@@ -642,7 +642,7 @@ class Car: Drivable {
     var speed: Double = 0.0
 
     init(speed: Double) {
-        
+        self.speed = speed
     }
 
     func startEngine() {
