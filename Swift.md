@@ -585,7 +585,7 @@ When you mark a closure parameter with the `@escaping` attribute, you are explic
 
 #### How Escaping Closures Work
 
-The primary characteristic of an escaping closure is that it requires special memory management and might involve strong reference cycles if not handled carefully. 
+The primary characteristic of an escaping closure is that it requires special memory management and might involve strong reference cycles if not handled carefully.
 
 
 
