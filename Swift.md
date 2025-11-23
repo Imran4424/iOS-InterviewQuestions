@@ -579,7 +579,7 @@ An escaping closure is a closure that is called after the function it was passed
 
 The term "escaping" refers to the closure's ability to "escape" the scope of the function body it was defined within.
 
-
+In Swift, closures are non-escaping by default, which means they must be executed within the body of the function they are passed to, and the compiler ensures their memory is cleaned up as soon as the function returns.
 
 
 
