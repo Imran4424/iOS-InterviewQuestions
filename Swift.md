@@ -598,6 +598,7 @@ Step by Step breakdown of how escaping closures work
 
 - **Asynchronous Operations:** Network requests are a classic example. You start a data fetch in a function, but the closure that processes the data (the completion handler) can only run when the network response returns, which might be seconds later.
 - **Delegates and Callbacks:** Storing a closure as a property of a class to be used as a callback mechanism.
+- **Dispatch Queues:** Executing a closure on a background thread using.
 
 
 
