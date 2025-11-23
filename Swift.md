@@ -573,6 +573,6 @@ let closure = { [unowned owner] in
 
 In a nutshell, `weak` and `unowned` do the same thing but in case of unowned we don't need the overhead of unwrapping it ourself. But we need to be sure that `unowned` literals does not contains `nil` ever otherwise we will face crush.
 
-
+### What does “escaping closure” mean?
 
 
