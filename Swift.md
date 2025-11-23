@@ -514,5 +514,6 @@ let result = add(5, 6)
 
 This can be shortened using type inference and an implicit return for single-expression closures:
 
-
+```swift
+```
 
