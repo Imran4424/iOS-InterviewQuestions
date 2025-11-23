@@ -534,6 +534,8 @@ The primary reasons for using a capture list are to:
 - Prevent strong reference cycles (retain cycles), which cause memory leaks when two objects hold strong references to each other.
 - Control whether a variable is captured by reference (the default behavior) or by value (creating a copy at the time of the closure's creation).
 
+The capture list is placed at the very beginning of the closure expression
+
 
 
 
