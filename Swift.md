@@ -679,7 +679,7 @@ Swift Protocols also support
 
 Protocol Oriented Programming is a protocol first approach instead of class first approach of Object oriented Programming.
 
-The Pillars of Protocol-Oriented Programming(POP)
+The Pillars of Protocol-Oriented Programming (POP)
 
 - **Protocol Extension**
 - **Protocol Inheritance**
