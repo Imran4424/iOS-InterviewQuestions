@@ -482,6 +482,7 @@ class CreditCard {
 
 ### What is a closure in Swift?
 
+A closure is a self-contained block of functionality that can be passed around and used in your code.
 
 
 
