@@ -697,7 +697,7 @@ This is useful for promoting code reuse, creating a single source of truth for c
 
 ```swift
 protocol Entity {
-    var name: String {get set}
+    var name: String { get set }
     static func uid() -> String
 }
 
