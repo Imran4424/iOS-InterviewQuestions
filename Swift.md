@@ -465,3 +465,11 @@ class Person {
   - **Closures:** When capturing `self` in a closure where the closure and `self` will always be deallocated at the same time (captured via `[unowned self]` in the capture list).
 
 
+
+
+
+
+
+
+
+
