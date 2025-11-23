@@ -523,5 +523,7 @@ add(5, 6)
 ```
 
 ```swift
-
+// Or even shorter with shorthand argument names:
+let add: (Int, Int) -> Int = { $0 + $1 }
+add(5, 6)
 ```
