@@ -482,7 +482,7 @@ class CreditCard {
 
 ### What is a closure in Swift?
 
-A closure is a self-contained block of functionality that can be passed around and used in your code.
+A closure is a self-contained block of functionality that can be passed around and used in your code. It it much like an unnamed function.
 
 ```swift
 { (parameters) -> returnType in
