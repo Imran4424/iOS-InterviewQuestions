@@ -466,7 +466,16 @@ class Person {
 
 An `unowned` reference must be a non-optional type in Swift:
 
-
+```swift
+class CreditCard {
+    let number: UInt64
+    unowned let customer: Customer // A credit card must always have a customer
+    init(number: UInt64, customer: Customer) {
+        self.number = number
+        self.customer = customer
+    }
+}
+```
 
 
 
