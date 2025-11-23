@@ -595,3 +595,20 @@ Step by Step breakdown of how escaping closures work
 4. **Closure Executes Later:** The closure is executed at a later time, long after the original function call is finished.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
