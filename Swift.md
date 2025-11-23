@@ -589,6 +589,6 @@ The primary characteristic of an escaping closure is that it requires special me
 
 Step by Step breakdown of how escaping closures work
 
-
+1. **Function Call:** A function is called with an escaping closure as an argument.
 
 
