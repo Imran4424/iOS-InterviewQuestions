@@ -562,6 +562,8 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
 
 #### `unowned` 
 
+This is similar to a weak reference in that it doesn't create a strong reference, but the captured value is assumed to always be valid (non-optional) for the lifetime of the closure. If the object is deallocated and the closure tries to access it, the application will crash. Use unowned only when you are certain that the captured instance will never be nil while the closure is executing.
+
 ```swift
 // Example where 'owner' is guaranteed to exist as long as the 'closure' exists
 let closure = { [unowned owner] in
