@@ -526,3 +526,5 @@ add(5, 6)
 ```
 
 ### Explain capture lists in closures
+
+A capture list in a Swift closure is a mechanism that allows you to explicitly control how values from the surrounding scope are captured and managed within the closure's memory.
