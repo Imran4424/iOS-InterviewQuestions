@@ -550,7 +550,15 @@ When dealing with class instances (reference types), the default behavior is a s
 
 This creates a `weak` reference to the instance, which does not keep a strong hold on the object and does not increment its reference count. The captured value becomes an `optional`, allowing it to be set to `nil` automatically if the original object is deallocated. We should use `weak` when the captured reference might become `nil` at some point during the closure's lifetime.
 
+```swift
+DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+    guard let self else { // Safely unwrap the weak reference
+        return 
+    }
 
+    self.performTask()
+}
+```
 
 
 
