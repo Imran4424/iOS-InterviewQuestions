@@ -542,6 +542,12 @@ let closure = { [capture list] (parameters) -> returnType in
 }
 ```
 
+#### Capturing Reference Types (Weak and Unowned)
+
+When dealing with class instances (reference types), the default behavior is a strong capture, which increments the object's reference count and can lead to retain cycles. Capture lists are used to specify a different kind of reference
+
+
+
 
 
 
