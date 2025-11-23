@@ -440,3 +440,10 @@ Use `weak` when
   - **Closures:** When capturing `self` in a closure where `self` might be released before the closure finishes executing (captured via `[weak self]` in the capture list).
 
 A `weak` reference must be a `var` optional type in Swift:
+
+```swift
+```
+
+
+
+
