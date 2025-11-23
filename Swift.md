@@ -430,7 +430,7 @@ unit4A = nil
 
 You would use `weak` versus `unowned` based on the lifetimes and ownership relationship between the two related class instances in your code. Both are used to break strong reference cycles, but they handle the potential absence of the referenced object differently.
 
-Use `weak` when 
+#### Use `weak` when 
 
 - The referenced object can be `nil` (optional relationship) or has a shorter lifetime than the object holding the reference
 - The connection between the two objects does not have to exist at all times.
@@ -456,6 +456,6 @@ class Person {
 }
 ```
 
-
+#### Use unowned when
 
 
