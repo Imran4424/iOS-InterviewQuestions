@@ -682,7 +682,7 @@ Protocol Oriented Programming is a protocol first approach instead of class firs
 The Pillars of Protocol-Oriented Programming (POP)
 
 - **Protocol Extension:** For Default Implementation
-- **Protocol Inheritance**
+- **Protocol Inheritance:** Add further requirements on top of the requirements it inherits.
 - **Protocol Composition**
 
 [Protocols Oriented Programming in Details](https://github.com/Imran4424/SwiftProblemNSolution/blob/master/25.ProtocolOrientedProgramming/ProtocolOrientedProgramming.md)
