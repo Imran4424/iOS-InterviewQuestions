@@ -685,4 +685,6 @@ The Pillars of Protocol-Oriented Programming (POP)
 - **Protocol Inheritance:** Add further requirements on top of the requirements it inherits.
 - **Protocol Composition:** Allowing a type to conform multiple protocols
 
+Protocol-Oriented Programming (POP) emphasis on these pilar along with value types like struct and enum rather than classes.
+
 [Protocols Oriented Programming in Details](https://github.com/Imran4424/SwiftProblemNSolution/blob/master/25.ProtocolOrientedProgramming/ProtocolOrientedProgramming.md)
