@@ -695,7 +695,23 @@ A protocol extension adds default implementations of methods and computed proper
 
 This is useful for promoting code reuse, creating a single source of truth for common behavior, and allowing conforming types to provide their own custom implementations or use the defaults provided.
 
+```swift
+protocol Entity {
+    var name: String {get set}
+    static func uid() -> String
+}
 
+extension Entity {
+    static func uid() -> String {
+        return UUID().uuidString
+    }
+}
+
+struct Order: Entity {
+    var name: String
+    let uid: String = Order.uid()
+}
+```
 
 
 
