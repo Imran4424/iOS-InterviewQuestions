@@ -671,7 +671,7 @@ struct Bicycle: Drivable {
 
 Swift Protocols also support
 
-- **Protocol Extension:** For Default Implementation
+- **Protocol Extension**
 - **Protocol Inheritance**
 - **Protocol Composition**
 
@@ -681,7 +681,7 @@ Protocol Oriented Programming is a protocol first approach instead of class firs
 
 The Pillars of Protocol-Oriented Programming (POP)
 
-- **Protocol Extension**
+- **Protocol Extension:** For Default Implementation
 - **Protocol Inheritance**
 - **Protocol Composition**
 
