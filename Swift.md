@@ -480,6 +480,8 @@ class CreditCard {
 
 # Closures
 
+### What is a closure in Swift?
+
 
 
 
