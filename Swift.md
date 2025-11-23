@@ -484,5 +484,9 @@ class CreditCard {
 
 A closure is a self-contained block of functionality that can be passed around and used in your code.
 
-
+```swift
+{ (parameters) -> returnType in
+    // statements
+}
+```
 
