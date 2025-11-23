@@ -583,7 +583,9 @@ In Swift, closures are non-escaping by default, which means they must be execute
 
 When you mark a closure parameter with the `@escaping` attribute, you are explicitly telling the compiler that the closure's execution might be deferred or stored for later use.
 
+#### How Escaping Closures Work
 
+The primary characteristic of an escaping closure is that it requires special memory management and might involve strong reference cycles if not handled carefully. 
 
 
 
