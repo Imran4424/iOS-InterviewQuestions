@@ -596,7 +596,7 @@ Step by Step breakdown of how escaping closures work
 
 #### Common Use Cases
 
-
+- **Asynchronous Operations:** Network requests are a classic example. You start a data fetch in a function, but the closure that processes the data (the completion handler) can only run when the network response returns, which might be seconds later.
 
 
 
