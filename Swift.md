@@ -617,7 +617,9 @@ func someFunctionWithNonEscapingClosure(closure: () -> Void) {
 }
 ```
 
+#### Memory Management Consideration
 
+Because escaping closures can hold strong references to self within a class instance, they are the main cause of retain cycles in Swift.
 
 
 
