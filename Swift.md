@@ -674,3 +674,5 @@ Swift Protocols also support
 - **Protocol Extension:** For Default Implementation
 - **Protocol Inheritance**
 - **Protocol Composition**
+
+### What is protocol-oriented programming (POP) in Swift?
