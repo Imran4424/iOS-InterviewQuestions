@@ -512,3 +512,7 @@ let result = add(5, 6)
 // result is 11
 ```
 
+This can be shortened using type inference and an implicit return for single-expression closures:
+
+
+
