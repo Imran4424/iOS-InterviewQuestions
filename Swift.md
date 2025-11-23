@@ -522,3 +522,6 @@ let add: (Int, Int) -> Int = { $0 + $1 }
 add(5, 6)
 ```
 
+```swift
+
+```
