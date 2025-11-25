@@ -717,7 +717,7 @@ struct Order: Entity {
 
 In Swift, "protocol with `associatedtype`" usually means a protocol that has an `associatedtype` requirement—often called a PAT (Protocol with Associated Type).
 
-
+Associated types allow protocols to be generic and flexible without the user of the protocol having to specify every type parameter explicitly.
 
 
 
