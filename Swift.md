@@ -715,7 +715,7 @@ struct Order: Entity {
 
 ### What is “protocol with associatedtype” and why is it tricky?
 
-
+In Swift, “protocol with associatedtype” usually means a protocol that has an associatedtype requirement—often called a PAT (Protocol with Associated Type).
 
 
 
