@@ -889,7 +889,6 @@ This fixes the compiler error by telling Swift to enforce the required relations
 
 ```swift
 // --- The Fix: Adding explicit constraints or typealiases ---
-```swift
 func executePipelineFixed<T>(item: T) where T: Producer, T: Processor, T.Output == T.Input {
     let intermediate = item.generate() // T.Output
     let finalResult = item.process(intermediate) // T.Input matches T.Output
