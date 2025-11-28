@@ -823,7 +823,7 @@ Storing different concrete types that conform to the same associated type protoc
 
 For instance, you cannot create an `Array<Collection>` that holds both `MyIntegerStack` and `SetOfNames`.
 
-
+##### Compiler Inference Issues
 
 
 
