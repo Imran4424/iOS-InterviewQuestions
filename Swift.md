@@ -905,7 +905,19 @@ executePipelineFixed(item: StringToDataManager())
 Alternatively, you could add a `typealias` within `StringToDataManager` to help the compiler map the types clearly:
 
 ```swift
+struct StringToDataManagerFixed: Producer, Processor {
+    // Explicitly confirm the link between the two roles' associated types
+    typealias Input = String 
+    // Output is inferred as String for Producer, Data for Processor
 
+    func generate() -> String {
+        return "Some input string"
+    }
+    
+    func process(_ input: String) -> Data {
+        return input.data(using: .utf8) ?? Data()
+    }
+}
 ```
 
 
