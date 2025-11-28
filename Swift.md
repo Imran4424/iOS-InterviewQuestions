@@ -792,6 +792,9 @@ struct SetOfNames: Collection {
 The primary difficulty lies in the constraint they place on how they can be used: **a protocol with an associated type (or `Self` requirements) cannot be used as a standalone type** in variable declarations, function parameters, or collection elements (before recent Swift updates, which added partial solutions like `some` and `any` keywords).
 
 
+##### Loss of Abstraction (The "Existential" Problem)
+
+You cannot declare a simple variable of that protocol type.
 
 
 Below showing an exception of standard protocol with associated type as computed property with `some` 
@@ -806,7 +809,11 @@ struct ContentView: View {
 }
 ```
 
-##### Loss of Abstraction (The "Existential" Problem)
+
+
+
+
+
 
 
 
