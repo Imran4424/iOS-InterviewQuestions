@@ -728,7 +728,7 @@ protocol Collection {
 }
 ```
 
-When conforming protocol which
+When conforming protocol which `associatedtype` 
 
 
 
