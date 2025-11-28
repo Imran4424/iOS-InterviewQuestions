@@ -733,6 +733,7 @@ When conforming protocol which `associatedtype` we can explicitly define the ass
 ```swift
 struct MyIntegerStack: Collection {
     typealias Element = Int // Explicitly defining the associated type
+    // but this is optional, we can skip this still the code will work as expected
 
     private var elements: [Int] = []
 
