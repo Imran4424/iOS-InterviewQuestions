@@ -879,7 +879,6 @@ func executePipeline<T: Producer & Processor>(item: T) {
 
 // Attempting to call this function results in the inference failure:
 // executePipeline(item: StringToDataManager()) 
-
 ```
 
 
