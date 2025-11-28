@@ -719,9 +719,14 @@ In Swift, "protocol with `associatedtype`" usually means a protocol that has an 
 
 Associated types allow protocols to be generic and flexible without the user of the protocol having to specify every type parameter explicitly.
 
+A classic example from the Swift standard library is the `Collection` protocol:
 
-
-
+```swift
+protocol Collection {
+    associatedtype Element
+    // ... other requirements using Element, Index, etc.
+}
+```
 
 
 
