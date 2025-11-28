@@ -825,7 +825,7 @@ For instance, you cannot create an `Array<Collection>` that holds both `MyIntege
 
 ##### Compiler Inference Issues
 
-
+While Swift is good at inferring associated types in simple cases, complex interactions between multiple protocols with associated types can sometimes lead to obscure compiler errors and force the developer to add explicit type annotations or complex constraints.
 
 
 
