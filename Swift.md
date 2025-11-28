@@ -728,7 +728,11 @@ protocol Collection {
 }
 ```
 
-When conforming protocol which `associatedtype` 
+When conforming protocol which `associatedtype` we can explicitly define the associated type.
+
+```swift
+
+```
 
 
 
