@@ -904,6 +904,12 @@ executePipelineFixed(item: StringToDataManager())
 
 Alternatively, you could add a `typealias` within `StringToDataManager` to help the compiler map the types clearly:
 
+```swift
+
+```
+
+
+
 Below showing an exception of standard protocol with associated type as computed property with `some` 
 
 This usually requires using type-erasure techniques (creating "wrapper" types like Swift's `AnySequence` or `AnyHashable`).
