@@ -900,6 +900,10 @@ executePipelineFixed(item: StringToDataManager())
 // Output: Final result size: 19 bytes
 ```
 
+**Solution B: Use typealias in the custom type to make the association explicit**
+
+Alternatively, you could add a typealias within StringToDataManager to help the compiler map the types clearly:
+
 Below showing an exception of standard protocol with associated type as computed property with `some` 
 
 This usually requires using type-erasure techniques (creating "wrapper" types like Swift's `AnySequence` or `AnyHashable`).
