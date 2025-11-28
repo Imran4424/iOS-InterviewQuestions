@@ -883,69 +883,12 @@ func executePipeline<T: Producer & Processor>(item: T) {
 
 To resolve the ambiguity and satisfy the compiler, you must explicitly state that the associated types are identical:
 
-```swift
-import Foundation
-
-// 1. First Protocol: A data producer
-protocol Producer {
-    associatedtype Output
-    func generate() -> Output
-}
-
-// 2. Second Protocol: A data consumer/processor
-protocol Processor {
-    associatedtype Input
-    associatedtype Output
-    func process(_ input: Input) -> Output
-}
-
-// 3. A type intended to be both:
-// A type that produces a String AND processes a String into a Data object
-struct StringToDataManager: Producer, Processor {
-    
-    // Conforms to Producer: Output is String
-    func generate() -> String {
-        return "Some input string"
-    }
-    
-    // Conforms to Processor: Input is String, Output is Data
-    func process(_ input: String) -> Data {
-        return input.data(using: .utf8) ?? Data()
-    }
-}
-
-// 4. The tricky part: A generic function that requires a type conforming to *both* protocols.
-
-/* 
- * ❌ COMPILER ERROR SCENARIO ❌
- * The compiler struggles to reconcile that the 'Output' of Producer 
- * MUST be the 'Input' of the Processor when both are applied to a single generic type T.
- */
-
-/*
-// This generic function will often produce a vague compiler error, such as:
-// "Protocol 'Processor' requires 'Input' be specialized" or
-// "Generic parameter 'T' could not be inferred"
-func executePipeline<T: Producer & Processor>(item: T) {
-    // The compiler can't automatically guarantee T.Producer.Output == T.Processor.Input
-    let intermediate = item.generate()
-    let finalResult = item.process(intermediate)
-    print("Final result size: \(finalResult.count) bytes")
-}
-
-// Attempting to call this function results in the inference failure:
-// executePipeline(item: StringToDataManager()) 
-*/
-
-
-// --- The Fix: Adding explicit constraints or typealiases ---
-
-To resolve the ambiguity and satisfy the compiler, you must explicitly state that the associated types are identical:
-
-### Solution A: Add an explicit `where` clause constraint to the generic function
+**Solution A: Add an explicit `where` clause constraint to the generic function**
 
 This fixes the compiler error by telling Swift to enforce the required relationship between the associated types:
 
+```swift
+// --- The Fix: Adding explicit constraints or typealiases ---
 ```swift
 func executePipelineFixed<T>(item: T) where T: Producer, T: Processor, T.Output == T.Input {
     let intermediate = item.generate() // T.Output
