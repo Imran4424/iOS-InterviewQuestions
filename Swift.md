@@ -760,6 +760,30 @@ stack.push(20)
 
 But defining the associated type explicitly is optional, let's see another example without defining the associated type explicitly.
 
+```swift
+struct SetOfNames: Collection {
+    // We don't need 'typealias Element = String'
+
+    private var names: Set<String> = []
+
+    // The compiler sees this returns String, so it infers Element is String
+    func getName(at index: Int) -> String? {
+        // Implementation omitted for brevity
+        return names.first
+    }
+    
+    // The compiler sees this accepts a String, so it infers Element is String
+    mutating func insert(_ name: String) {
+        names.insert(name)
+    }
+
+    var isEmpty: Bool {
+        return names.isEmpty
+    }
+}
+
+```
+
 
 
 
