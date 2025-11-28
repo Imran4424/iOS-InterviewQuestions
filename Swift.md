@@ -785,7 +785,6 @@ struct SetOfNames: Collection {
         return names.isEmpty
     }
 }
-
 ```
 
 
