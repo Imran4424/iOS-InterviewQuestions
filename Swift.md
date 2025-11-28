@@ -860,6 +860,26 @@ struct StringToDataManager: Producer, Processor {
 }
 
 // 4. The tricky part: A generic function that requires a type conforming to *both* protocols.
+
+/* 
+ * ❌ COMPILER ERROR SCENARIO ❌
+ * The compiler struggles to reconcile that the 'Output' of Producer 
+ * MUST be the 'Input' of the Processor when both are applied to a single generic type T.
+ */
+
+// This generic function will often produce a vague compiler error, such as:
+// "Protocol 'Processor' requires 'Input' be specialized" or
+// "Generic parameter 'T' could not be inferred"
+func executePipeline<T: Producer & Processor>(item: T) {
+    // The compiler can't automatically guarantee T.Producer.Output == T.Processor.Input
+    let intermediate = item.generate()
+    let finalResult = item.process(intermediate)
+    print("Final result size: \(finalResult.count) bytes")
+}
+
+// Attempting to call this function results in the inference failure:
+// executePipeline(item: StringToDataManager()) 
+
 ```
 
 
