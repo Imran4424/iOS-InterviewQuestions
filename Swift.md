@@ -819,7 +819,7 @@ This forces the client code to become generic, which can propagate through a cod
 
 ##### Complexity in Heterogeneous Collections
 
-
+Storing different concrete types that conform to the same associated type protocol in a single array is not straightforward.
 
 Below showing an exception of standard protocol with associated type as computed property with `some` 
 
