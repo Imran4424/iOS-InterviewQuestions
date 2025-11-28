@@ -731,7 +731,26 @@ protocol Collection {
 When conforming protocol which `associatedtype` we can explicitly define the associated type.
 
 ```swift
+struct MyIntegerStack: Collection {
+    typealias Element = Int // Explicitly defining the associated type
 
+    private var elements: [Int] = []
+
+    // Example requirement: a method that returns the count
+    var count: Int {
+        return elements.count
+    }
+    
+    // Example requirement: a method to add an element
+    mutating func push(_ element: Element) { // Uses the defined Element type (Int)
+        elements.append(element)
+    }
+
+    // Example requirement: a method to check if the collection is empty
+    var isEmpty: Bool {
+        return elements.isEmpty
+    }
+}
 ```
 
 
