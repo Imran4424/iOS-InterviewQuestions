@@ -920,7 +920,7 @@ struct StringToDataManagerFixed: Producer, Processor {
 }
 ```
 
-
+#### Exceptions
 
 Below showing an exception of standard protocol with associated type as computed property with `some` 
 
