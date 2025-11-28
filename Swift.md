@@ -824,7 +824,10 @@ Storing different concrete types that conform to the same associated type protoc
 For instance, you cannot create an `Array<Collection>` that holds both `MyIntegerStack` and `SetOfNames`.
 
 ```swift
+var stack = MyIntegerStack()
+var uniqueNames = SetOfNames() 
 
+let collectionArray: [Collection] = [stack, uniqueNames]
 ```
 
 ##### Compiler Inference Issues
