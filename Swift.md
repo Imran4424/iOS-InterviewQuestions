@@ -881,6 +881,7 @@ func executePipeline<T: Producer & Processor>(item: T) {
 // executePipeline(item: StringToDataManager()) 
 ```
 
+To resolve the ambiguity and satisfy the compiler, you must explicitly state that the associated types are identical:
 
 Below showing an exception of standard protocol with associated type as computed property with `some` 
 
