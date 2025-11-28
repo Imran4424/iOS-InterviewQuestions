@@ -758,7 +758,7 @@ stack.push(10)
 stack.push(20)
 ```
 
-But defining the associated type explicitly is optional
+But defining the associated type explicitly is optional, let's see another example without defining the associated type explicitly.
 
 
 
