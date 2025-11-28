@@ -763,6 +763,7 @@ But defining the associated type explicitly is optional, let's see another examp
 ```swift
 struct SetOfNames: Collection {
     // We don't need 'typealias Element = String'
+    // since this is optional
 
     private var names: Set<String> = []
 
