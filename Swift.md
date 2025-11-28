@@ -829,6 +829,37 @@ While Swift is good at inferring associated types in simple cases, complex inter
 
 
 ```swift
+import Foundation
+
+// 1. First Protocol: A data producer
+protocol Producer {
+    associatedtype Output
+    func generate() -> Output
+}
+
+// 2. Second Protocol: A data consumer/processor
+protocol Processor {
+    associatedtype Input
+    associatedtype Output
+    func process(_ input: Input) -> Output
+}
+
+// 3. A type intended to be both:
+// A type that produces a String AND processes a String into a Data object
+struct StringToDataManager: Producer, Processor {
+    
+    // Conforms to Producer: Output is String
+    func generate() -> String {
+        return "Some input string"
+    }
+    
+    // Conforms to Processor: Input is String, Output is Data
+    func process(_ input: String) -> Data {
+        return input.data(using: .utf8) ?? Data()
+    }
+}
+
+// 4. The tricky part: A generic function that requires a type conforming to *both* protocols.
 ```
 
 
