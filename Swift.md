@@ -804,6 +804,17 @@ var myCollection: Collection = SetOfNames()
 
 The compiler cannot know the size or specific methods of the underlying type because different conforming types could have different associated types (UInt8, String, etc.).
 
+##### Requires Generics (Workarounds)
+
+To use them, you typically must wrap the usage in a generic constraint:
+
+```swift
+// This is the correct, compiling way to write generic code that accepts any collection:
+func process<T: Collection>(_ collection: T) {
+    // ... code that works on any T, as long as it's a Collection ...
+}
+```
+
 Below showing an exception of standard protocol with associated type as computed property with `some` 
 
 ```swift
