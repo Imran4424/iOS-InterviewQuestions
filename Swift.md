@@ -797,6 +797,7 @@ The primary difficulty lies in the constraint they place on how they can be used
 You cannot declare a simple variable of that protocol type.
 
 ```swift
+var myCollection: Collection = SetOfNames() 
 ```
 
 Below showing an exception of standard protocol with associated type as computed property with `some` 
