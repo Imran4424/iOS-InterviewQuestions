@@ -791,7 +791,16 @@ struct SetOfNames: Collection {
 
 The primary difficulty lies in the constraint they place on how they can be used: **a protocol with an associated type (or `Self` requirements) cannot be used as a standalone type** in variable declarations, function parameters, or collection elements (before recent Swift updates, which added partial solutions like `some` and `any` keywords).
 
+```swift
+import SwiftUI
 
+struct ContentView: View {
+    var body: some View {
+        Text("Hello, world!")
+            .padding() // Adds some padding around the text
+    }
+}
+```
 
 
 
