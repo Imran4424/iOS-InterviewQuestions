@@ -756,6 +756,9 @@ struct MyIntegerStack: Collection {
 var stack = MyIntegerStack()
 stack.push(10)
 stack.push(20)
+
+print(stack.count) // Output: 2
+print(stack.isEmpty) // Output: false
 ```
 
 But defining the associated type explicitly is optional, let's see another example without defining the associated type explicitly.
