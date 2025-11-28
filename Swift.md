@@ -828,6 +828,9 @@ For instance, you cannot create an `Array<Collection>` that holds both `MyIntege
 
 
 
+
+
+
 Below showing an exception of standard protocol with associated type as computed property with `some` 
 
 This usually requires using type-erasure techniques (creating "wrapper" types like Swift's `AnySequence` or `AnyHashable`).
