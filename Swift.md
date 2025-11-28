@@ -883,6 +883,9 @@ func executePipeline<T: Producer & Processor>(item: T) {
 
 To resolve the ambiguity and satisfy the compiler, you must explicitly state that the associated types are identical:
 
+```swift
+```
+
 Below showing an exception of standard protocol with associated type as computed property with `some` 
 
 This usually requires using type-erasure techniques (creating "wrapper" types like Swift's `AnySequence` or `AnyHashable`).
