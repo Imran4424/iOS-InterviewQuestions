@@ -827,6 +827,7 @@ For instance, you cannot create an `Array<Collection>` that holds both `MyIntege
 var stack = MyIntegerStack()
 var uniqueNames = SetOfNames() 
 
+// the following one will give compilation error
 let collectionArray: [Collection] = [stack, uniqueNames]
 ```
 
