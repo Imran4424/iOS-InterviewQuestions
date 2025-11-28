@@ -817,6 +817,8 @@ func process<T: Collection>(_ collection: T) {
 
 This forces the client code to become generic, which can propagate through a codebase and add complexity.
 
+##### Complexity in Heterogeneous Collections
+
 
 
 Below showing an exception of standard protocol with associated type as computed property with `some` 
