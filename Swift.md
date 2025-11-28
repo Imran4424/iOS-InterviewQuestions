@@ -797,6 +797,8 @@ The primary difficulty lies in the constraint they place on how they can be used
 You cannot declare a simple variable of that protocol type.
 
 ```swift
+// this will not compile
+// Error: 'Collection' can only be used as a generic constraint
 var myCollection: Collection = SetOfNames() 
 ```
 
