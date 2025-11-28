@@ -752,8 +752,13 @@ struct MyIntegerStack: Collection {
         return elements.isEmpty
     }
 }
+
+var stack = MyIntegerStack()
+stack.push(10)
+stack.push(20)
 ```
 
+But defining the associated type explicitly is optional
 
 
 
