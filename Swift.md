@@ -1008,9 +1008,6 @@ protocol Collection {
 }
 
 struct MyIntegerStack: Collection {
-    typealias Element = Int // Explicitly defining the associated type
-    // but this is optional, we can skip this still the code will work as expected
-
     private var elements: [Int] = []
 
     // Example requirement: a method that returns the count
@@ -1029,41 +1026,46 @@ struct MyIntegerStack: Collection {
     }
 }
 
-struct SetOfNames: Collection {
-    // We don't need 'typealias Element = String'
-    // since this is optional
+struct MyIntegerQueue: Collection {
 
-    private var names: Set<String> = []
+    private var elements: [Int] = []
 
-    // The compiler sees this returns String, so it infers Element is String
-    func getName(at index: Int) -> String? {
-        // Implementation omitted for brevity
-        return names.first
+    // Example requirement: a method that returns the count
+    var count: Int {
+        return elements.count
     }
     
-    // The compiler sees this accepts a String, so it infers Element is String
-    mutating func insert(_ name: String) {
-        names.insert(name)
+    // Example requirement: a method to add an element
+    mutating func push(_ element: Element) { // Uses the defined Element type (Int)
+        elements.append(element)
     }
 
+    mutating func pop() -> Element {
+        return elements.removeFirst()
+    }
+
+    // Example requirement: a method to check if the collection is empty
     var isEmpty: Bool {
-        return names.isEmpty
+        return elements.isEmpty
     }
 }
 
 var stack = MyIntegerStack()
-var uniqueNames = SetOfNames() 
+var queue = MyIntegerQueue() 
 
 // the following one will give compilation error
 // Error: 'Collection' can only be used as a generic constraint
-let collectionArray: [Collection] = [stack, uniqueNames]
+let collectionArray: [Collection] = [stack, queue]
 ```
 
 The above code will give us compilation error because of associatedtype Protocol used a variable type. To fix this we need to use Type erasure technique
 
-```
-struct AnyCollection: Collection {
-    
+```swift
+struct AnyCollection<Element>: Collection {
+    private let _isEmpty: () -> Bool
+    private let _anyElement: () -> Element?
+
+
 }
 ```
 
