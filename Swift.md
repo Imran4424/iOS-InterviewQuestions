@@ -995,7 +995,7 @@ For example:
 - `Element` in `Array<Element>`
 - `Key` and `Value` in `Dictionary<Key, Value>`
 
-
+### What is type erasure and where might you use it in iOS?
 
 
 
