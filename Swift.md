@@ -1004,9 +1004,7 @@ It involves wrapping an instance of a specific, concrete generic type within a g
 ```swift
 protocol Collection {
     associatedtype Element
-    var count: Int { get }
-    var isEmpty: Bool { get }
-    mutating func push(_ element: Element)
+    // ... other requirements using Element, Index, etc.
 }
 
 struct MyIntegerStack: Collection {
