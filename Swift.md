@@ -957,6 +957,11 @@ Generics achieve their flexibility by introducing type placeholders, often repre
 let's look at a non-generic function
 
 ```swift
+func swapTwoInts(_ a: inout Int, _ b: inout Int) {
+    let temporaryA = a
+    a = b
+    b = temporaryA
+}
 ```
 
 
