@@ -956,7 +956,8 @@ Generics achieve their flexibility by introducing type placeholders, often repre
 
 let's look at a non-generic function
 
-
+```swift
+```
 
 
 
