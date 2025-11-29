@@ -1059,9 +1059,13 @@ var uniqueNames = SetOfNames()
 let collectionArray: [Collection] = [stack, uniqueNames]
 ```
 
-The above code will give us compilation error because of associatedtype Protocol used a variable type. To fix this we need to use 
+The above code will give us compilation error because of associatedtype Protocol used a variable type. To fix this we need to use Type erasure technique
 
-
+```
+struct AnyCollection: Collection {
+    
+}
+```
 
 
 
