@@ -1091,6 +1091,11 @@ struct AnyCollection<Element>: Collection {
     }
 }
 
+var stack = MyIntegerStack()
+var queue = MyIntegerQueue() 
+
+// now, this gonna compile
+let collectionArray: [Collection] = [stack, queue]
 ```
 
 
