@@ -794,7 +794,7 @@ The primary difficulty lies in the constraint they place on how they can be used
 
 ##### Loss of Abstraction (The "Existential" Problem)
 
-You cannot declare a simple variable of that protocol type.
+We cannot declare a simple variable of that protocol type.
 
 ```swift
 // this will not compile
@@ -806,7 +806,7 @@ The compiler cannot know the size or specific methods of the underlying type bec
 
 ##### Requires Generics (Workarounds)
 
-To use them, you typically must wrap the usage in a generic constraint:
+To use them, we typically must wrap the usage in a generic constraint:
 
 ```swift
 // This is the correct, compiling way to write generic code that accepts any collection:
@@ -821,7 +821,7 @@ This forces the client code to become generic, which can propagate through a cod
 
 Storing different concrete types that conform to the same associated type protocol in a single array is not straightforward.
 
-For instance, you cannot create an `Array<Collection>` that holds both `MyIntegerStack` and `SetOfNames`.
+For instance, we cannot create an `Array<Collection>` that holds both `MyIntegerStack` and `SetOfNames`.
 
 ```swift
 var stack = MyIntegerStack()
@@ -889,7 +889,7 @@ func executePipeline<T: Producer & Processor>(item: T) {
 // executePipeline(item: StringToDataManager()) 
 ```
 
-To resolve the ambiguity and satisfy the compiler, you must explicitly state that the associated types are identical:
+To resolve the ambiguity and satisfy the compiler, we must explicitly state that the associated types are identical:
 
 **Solution A: Add an explicit `where` clause constraint to the generic function**
 
@@ -910,7 +910,7 @@ executePipelineFixed(item: StringToDataManager())
 
 **Solution B: Use `typealias` in the custom type to make the association explicit**
 
-Alternatively, you could add a `typealias` within `StringToDataManager` to help the compiler map the types clearly:
+Alternatively, we could add a `typealias` within `StringToDataManager` to help the compiler map the types clearly:
 
 ```swift
 struct StringToDataManagerFixed: Producer, Processor {
@@ -948,9 +948,9 @@ struct ContentView: View {
 
 ### Explain generics in Swift.
 
-Generics are a powerful feature in Swift that allow you to write flexible, reusable code that can work with any type, while still providing type safety at compile time
+Generics are a powerful feature in Swift that allow us to write flexible, reusable code that can work with any type, while still providing type safety at compile time
 
-Instead of writing a function or a data structure that only handles `Int`, or only handles `String`, you can write it once in a generic way, and the compiler automatically adapts it for the specific types you use.
+Instead of writing a function or a data structure that only handles `Int`, or only handles `String`, we can write it once in a generic way, and the compiler automatically adapts it for the specific types we use.
 
 Generics achieve their flexibility by introducing type placeholders, often represented by simple letters like `T` (for Type), `Element`, or `Key` and `Value`.
 
@@ -997,7 +997,7 @@ For example:
 
 ### What is type erasure and where might you use it in iOS?
 
-Type erasure is a programming technique used in Swift to circumvent the constraints imposed by generic types and protocols with associated types (`PATs`) when you need to store them in non-generic containers like standard arrays or pass them as opaque function arguments.
+Type erasure is a programming technique used in Swift to circumvent the constraints imposed by generic types and protocols with associated types (`PATs`) when we need to store them in non-generic containers like standard arrays or pass them as opaque function arguments.
 
 It involves wrapping an instance of a specific, concrete generic type within a generic wrapper struct or class whose own generic information is less specific (often using `Any` as a placeholder) to present a uniform interface to the rest of the codebase.
 
