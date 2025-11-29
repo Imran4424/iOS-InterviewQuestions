@@ -1095,7 +1095,7 @@ var stack = MyIntegerStack()
 var queue = MyIntegerQueue() 
 
 // now, this gonna compile
-let collectionArray: [Collection] = [stack, queue]
+let collectionArray: [AnyCollection<Int>] = [AnyCollection(stack), AnyCollection(queue)]
 ```
 
 
