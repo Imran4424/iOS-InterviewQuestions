@@ -975,8 +975,18 @@ func swapTwoValues<T>(_ a: inout T, _ b: inout T) {
 }
 ```
 
+Here, T is name of the type parameter which is working as a generics, it can be anything.
 
+```swift
+// Element is a placeholder for a specific type
+func swapTwoValues<Element>(_ a: inout Element, _ b: inout Element) {
+    let temporaryA = a
+    a = b
+    b = temporaryA
+}
+```
 
+In above code, we used `Element` instead of T, which will work just fine.
 
 
 
