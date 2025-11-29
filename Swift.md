@@ -1102,6 +1102,9 @@ let collectionArray: [AnyCollection<Int>] = [AnyCollection(stack), AnyCollection
 
 Type erasure is primarily used in scenarios where you are working with complex, modular architectures and need flexibility in handling diverse data types uniformly. It is prevalent in the Combine framework and any system heavily reliant on generic abstraction.
 
+- You want to return different concrete generic types behind a single API.
+- You need to store heterogeneous generic instances in a collection.
+
 ##### The Combine Framework (`AnyCancellable`, `AnyPublisher`)
 
 
