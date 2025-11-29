@@ -1001,7 +1001,12 @@ Type erasure is a programming technique used in Swift to circumvent the constrai
 
 It involves wrapping an instance of a specific, concrete generic type within a generic wrapper struct or class whose own generic information is less specific (often using `Any` as a placeholder) to present a uniform interface to the rest of the codebase.
 
-
+```swift
+protocol Collection {
+    associatedtype Element
+    // ... other requirements using Element, Index, etc.
+}
+```
 
 
 
