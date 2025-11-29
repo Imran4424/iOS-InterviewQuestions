@@ -944,7 +944,7 @@ struct ContentView: View {
 }
 ```
 
-
+# Generics & Type System
 
 
 
