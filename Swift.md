@@ -1115,6 +1115,6 @@ When you subscribe to a publisher, you get a cancellable object back. Different 
 
 **AnyPublisher**
 
-
+You often want a function to return a publisher without revealing all the complex, internal chaining operations used to create it (e.g., a `map`, `filter`, and decode chain). `AnyPublisher` hides these implementation details, offering a clean, simple return type for your APIs.
 
 
