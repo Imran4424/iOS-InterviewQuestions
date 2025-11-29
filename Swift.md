@@ -1098,7 +1098,7 @@ var queue = MyIntegerQueue()
 let collectionArray: [AnyCollection<Int>] = [AnyCollection(stack), AnyCollection(queue)]
 ```
 
-
+#### Where to Use Type Erasure in iOS Development
 
 
 
