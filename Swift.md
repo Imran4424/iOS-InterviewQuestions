@@ -1004,7 +1004,9 @@ It involves wrapping an instance of a specific, concrete generic type within a g
 ```swift
 protocol Collection {
     associatedtype Element
-    // ... other requirements using Element, Index, etc.
+    var count: Int { get }
+    var isEmpty: Bool { get }
+    mutating func push(_ element: Element)
 }
 
 struct MyIntegerStack: Collection {
@@ -1061,12 +1063,36 @@ let collectionArray: [Collection] = [stack, queue]
 The above code will give us compilation error because of associatedtype Protocol used a variable type. To fix this we need to use Type erasure technique
 
 ```swift
+// A concrete, non-generic wrapper struct
 struct AnyCollection<Element>: Collection {
+    
+    // Store references to the underlying operations using closures
+    private let _push: (Element) -> Void
     private let _isEmpty: () -> Bool
-    private let _anyElement: () -> Element?
+    private let _count: () -> Int
 
+    // The initializer accepts any concrete type 'C' that conforms to the original protocol
+    init<C: Collection>(_ collection: C) where C.Element == Element {
+        // Forward the specific implementations via closures
+        self._push = collection.push
+        self._isEmpty = { collection.isEmpty }
+        self._count = { collection.count }
+    }
 
+    // Now, AnyCollection implements the requirements by calling the stored closures
+    var count: Int {
+        return _count()
+    }
+
+    mutating func push(_ element: Element) {
+        _push(element)
+    }
+
+    var isEmpty: Bool {
+        return _isEmpty()
+    }
 }
+
 ```
 
 
