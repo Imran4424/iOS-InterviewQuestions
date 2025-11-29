@@ -942,6 +942,13 @@ struct ContentView: View {
         Text("Hello, world!")
     }
 }
+
+var stack = MyIntegerStack()
+var uniqueNames = SetOfNames() 
+
+// the following one will give compilation error
+// Error: 'Collection' can only be used as a generic constraint
+let collectionArray: [Collection] = [stack, uniqueNames]
 ```
 
 # Generics & Type System
