@@ -950,9 +950,9 @@ struct ContentView: View {
 
 Generics are a powerful feature in Swift that allow you to write flexible, reusable code that can work with any type, while still providing type safety at compile time
 
-Instead of writing a function or a data structure that only handles Int, or only handles String, you can write it once in a generic way, and the compiler automatically adapts it for the specific types you use.
+Instead of writing a function or a data structure that only handles `Int`, or only handles `String`, you can write it once in a generic way, and the compiler automatically adapts it for the specific types you use.
 
-
+Generics achieve their flexibility by introducing type placeholders, often represented by simple letters like `T` (for Type), `Element`, or `Key` and `Value`.
 
 
 
