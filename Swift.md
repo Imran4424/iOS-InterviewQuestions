@@ -966,7 +966,14 @@ func swapTwoInts(_ a: inout Int, _ b: inout Int) {
 
 Now, Let's make this a generic function which can work with `Int`, `Float`, `Double`, `String`, etc.
 
-
+```swift
+// T is a placeholder for a specific type
+func swapTwoValues<T>(_ a: inout T, _ b: inout T) {
+    let temporaryA = a
+    a = b
+    b = temporaryA
+}
+```
 
 
 
