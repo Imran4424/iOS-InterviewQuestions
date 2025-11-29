@@ -999,7 +999,7 @@ For example:
 
 Type erasure is a programming technique used in Swift to circumvent the constraints imposed by generic types and protocols with associated types (`PATs`) when you need to store them in non-generic containers like standard arrays or pass them as opaque function arguments.
 
-
+It involves wrapping an instance of a specific, concrete generic type within a generic wrapper struct or class whose own generic information is less specific (often using `Any` as a placeholder) to present a uniform interface to the rest of the codebase.
 
 
 
