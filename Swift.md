@@ -964,6 +964,7 @@ func swapTwoInts(_ a: inout Int, _ b: inout Int) {
 }
 ```
 
+Now, Let's make this a generic function which can work with `Int`, `Float`, `Double`, `String`, etc.
 
 
 
