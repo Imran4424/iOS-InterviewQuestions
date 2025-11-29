@@ -946,7 +946,7 @@ struct ContentView: View {
 
 # Generics & Type System
 
-
+### Explain generics in Swift.
 
 
 
