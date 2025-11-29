@@ -986,9 +986,9 @@ func swapTwoValues<Element>(_ a: inout Element, _ b: inout Element) {
 }
 ```
 
-In above code, we used `Element` instead of T, which will work just fine. Using `T` as generic type Parameter name is long standing convention in Programming Languages with Generics (Like C++, C#, Java). That's why we will more often in others code.
+In above code, we used `Element` instead of T, which will work just fine. Using `T` as generic type Parameter name is long standing convention in Programming Languages with Generics (Like C++, C#, Java). That's why we will see `T` more often in others code.
 
-
+But Swift's documentation and best practices encourage using more descriptive names for type parameters when they convey a specific meaning or relationship within the generic type or function.
 
 
 
