@@ -990,6 +990,11 @@ In above code, we used `Element` instead of T, which will work just fine. Using 
 
 But Swift's documentation and best practices encourage using more descriptive names for type parameters when they convey a specific meaning or relationship within the generic type or function.
 
+For example:
+
+- `Element` in `Array<Element>`
+- `Key` and `Value` in `Dictionary<Key, Value>`
+
 
 
 
