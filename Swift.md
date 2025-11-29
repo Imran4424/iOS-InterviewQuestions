@@ -942,13 +942,6 @@ struct ContentView: View {
         Text("Hello, world!")
     }
 }
-
-var stack = MyIntegerStack()
-var uniqueNames = SetOfNames() 
-
-// the following one will give compilation error
-// Error: 'Collection' can only be used as a generic constraint
-let collectionArray: [Collection] = [stack, uniqueNames]
 ```
 
 # Generics & Type System
@@ -1012,6 +1005,28 @@ It involves wrapping an instance of a specific, concrete generic type within a g
 protocol Collection {
     associatedtype Element
     // ... other requirements using Element, Index, etc.
+}
+
+struct MyIntegerStack: Collection {
+    typealias Element = Int // Explicitly defining the associated type
+    // but this is optional, we can skip this still the code will work as expected
+
+    private var elements: [Int] = []
+
+    // Example requirement: a method that returns the count
+    var count: Int {
+        return elements.count
+    }
+    
+    // Example requirement: a method to add an element
+    mutating func push(_ element: Element) { // Uses the defined Element type (Int)
+        elements.append(element)
+    }
+
+    // Example requirement: a method to check if the collection is empty
+    var isEmpty: Bool {
+        return elements.isEmpty
+    }
 }
 ```
 
