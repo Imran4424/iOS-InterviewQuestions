@@ -975,7 +975,7 @@ func swapTwoValues<T>(_ a: inout T, _ b: inout T) {
 }
 ```
 
-Here, T is name of the type parameter which is working as a generics, it can be anything.
+Here, `T` is name of the type parameter which is working as a generics, it can be anything.
 
 ```swift
 // Element is a placeholder for a specific type
@@ -986,7 +986,7 @@ func swapTwoValues<Element>(_ a: inout Element, _ b: inout Element) {
 }
 ```
 
-In above code, we used `Element` instead of T, which will work just fine.
+In above code, we used `Element` instead of T, which will work just fine. Using `T` as generic type Parameter name is long standing convention in Programming Languages with Generics (Like C++, C#, Java). That's why we will more often in others code.
 
 
 
