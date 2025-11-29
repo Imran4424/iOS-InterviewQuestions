@@ -997,6 +997,7 @@ For example:
 
 ### What is type erasure and where might you use it in iOS?
 
+Type erasure is a programming technique used in Swift to circumvent the constraints imposed by generic types and protocols with associated types (`PATs`) when you need to store them in non-generic containers like standard arrays or pass them as opaque function arguments.
 
 
 
