@@ -1113,6 +1113,8 @@ The Swift Combine framework makes extensive use of type erasure in its public AP
 
 When you subscribe to a publisher, you get a cancellable object back. Different publishers produce different, highly specific `Cancellable` types internally. Combine erases these specific types into the universal `AnyCancellable` wrapper. This allows you to store all subscription tokens in a single `Set<AnyCancellable>` without worrying about their internal generic types.
 
-****
+**AnyPublisher**
+
+
 
 
