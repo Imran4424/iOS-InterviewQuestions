@@ -1315,6 +1315,34 @@ It achieves this safety by ensuring that only one task can access or modify its 
 - **`@MainActor`:** Swift includes a special "global actor" called `@MainActor`, which guarantees that all annotated code runs on the main thread. This is essential for safely updating UI elements in frameworks like UIKit and SwiftUI.
 
 ```swift
+actor BankAccount {
+    private var balance: Double = 0.0 // Mutable state is isolated
+
+    func deposit(amount: Double) { // This method is actor-isolated
+        balance += amount
+    }
+
+    func withdraw(amount: Double) { // This method is actor-isolated
+        if balance >= amount {
+            balance -= amount
+        }
+    }
+    
+    // Immutable properties are nonisolated by default and can be accessed synchronously
+    let accountNumber: Int = 12345
+}
+
+// Accessing the actor's methods from an external, potentially concurrent, context
+func performTransactions() async {
+    let account = BankAccount()
+
+    // 'await' is required when calling an actor's isolated methods
+    await account.deposit(amount: 100)
+    await account.withdraw(amount: 50)
+    
+    // Immutable properties can be accessed directly
+    print("Account Number: \(account.accountNumber)") 
+}
 ```
 
 
