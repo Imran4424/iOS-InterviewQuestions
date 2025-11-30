@@ -1245,7 +1245,7 @@ let productRequest = AnyNetworkRequest(erasing: ProductRequest())
 
 ### How do you mark an async function and call it?
 
-#### Marking an async function
+#### Marking an `async` function
 
 To declare a function as asynchronous, you use the `async` keyword after the function's parameter list and before its return type. This signifies that the function might perform operations that can suspend its execution without blocking the calling thread.
 
@@ -1272,9 +1272,9 @@ enum SomeError: Error {
 }
 ```
 
+#### Calling an `async` function
 
-
-
+To call an async function, the calling code must also be within an async context. You then use the await keyword before calling the asynchronous function. This signals that the execution might pause at this point until the async function completes and returns its result. 
 
 
 
