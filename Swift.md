@@ -1237,7 +1237,8 @@ let productRequest = AnyNetworkRequest(erasing: ProductRequest())
 
 #### Swift Concurrency (`async/await`)
 
-- 
+- **Higher-level and Swift-native:** A modern Swift language feature that simplifies asynchronous programming.
+- **Structured concurrency:** Provides a structured way to manage task lifetimes, cancellation, and error handling.
 
 
 
