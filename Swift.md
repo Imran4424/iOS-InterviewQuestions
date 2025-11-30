@@ -1122,7 +1122,7 @@ You often want a function to return a publisher without revealing all the comple
 
 Type erasure in SwiftUI, most notably through `AnyView`, addresses the challenge of working with heterogeneous view types where the specific underlying view type is not known or needs to be hidden.
 
-If you need to return different concrete View types based on certain conditions, AnyView can wrap these different views, making them appear as a single AnyView type to the caller.
+If you need to return different concrete View types based on certain conditions, `AnyView` can wrap these different views, making them appear as a single AnyView type to the caller.
 
 ```swift
     struct ConditionalView: View {
@@ -1138,9 +1138,14 @@ If you need to return different concrete View types based on certain conditions,
     }
 ```
 
+You cannot directly create an array of View protocol instances if they have associated types or if the specific concrete types are different. `AnyView` allows you to store different view types within a collection by wrapping them.
 
-
-
+```swift
+var views: [AnyView] = [
+    AnyView(Text("Item 1")),
+    AnyView(Button("Tap Me") { print("Tapped") })
+]
+```
 
 
 
