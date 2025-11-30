@@ -1125,17 +1125,17 @@ Type erasure in SwiftUI, most notably through `AnyView`, addresses the challenge
 If you need to return different concrete View types based on certain conditions, `AnyView` can wrap these different views, making them appear as a single AnyView type to the caller.
 
 ```swift
-    struct ConditionalView: View {
-        let showText: Bool
+struct ConditionalView: View {
+    let showText: Bool
 
-        var body: some View {
-            if showText {
-                AnyView(Text("Hello, World!"))
-            } else {
-                AnyView(Image(systemName: "star.fill"))
-            }
+    var body: some View {
+        if showText {
+            AnyView(Text("Hello, World!"))
+        } else {
+            AnyView(Image(systemName: "star.fill"))
         }
     }
+}
 ```
 
 You cannot directly create an array of View protocol instances if they have associated types or if the specific concrete types are different. `AnyView` allows you to store different view types within a collection by wrapping them.
