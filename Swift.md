@@ -1347,7 +1347,7 @@ func performTransactions() async {
 
 In short, actor is a variation of class concept with the limitation of no inheritance support for making the code thread-safe.
 
-
+### What is the `@MainActor` attribute used for?
 
 
 
