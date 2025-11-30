@@ -1301,6 +1301,18 @@ Task {
 
 ### What is an `actor` in Swift?
 
+In Swift, an **actor is a reference type** that acts as a thread-safe container for mutable state, designed specifically to prevent data races in concurrent environments.
+
+It achieves this safety by ensuring that only one task can access or modify its internal data at any given time, a concept known as actor isolation.
+
+#### Key Concepts
+
+- **Data Race Prevention:** The primary purpose of an actor is to eliminate data races, which occur when multiple threads access and modify shared memory simultaneously, leading to unpredictable crashes and data corruption.
+- 
+
+
+
+
 
 
 
