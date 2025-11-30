@@ -1403,7 +1403,9 @@ func updateStatusLabel() {
 
 We can also use `MainActor.run { ... }` to execute a specific block of code on the main thread when needed.
 
+```swift
 
+```
 
 
 
