@@ -1240,6 +1240,7 @@ let productRequest = AnyNetworkRequest(erasing: ProductRequest())
 - **Higher-level and Swift-native:** A modern Swift language feature that simplifies asynchronous programming.
 - **Structured concurrency:** Provides a structured way to manage task lifetimes, cancellation, and error handling.
 - `async/await` keywords: Uses `async` to mark functions that can be suspended and `await` to call them, making asynchronous code look and feel more synchronous and readable.
+- **Built-in support:** Includes built-in support for error handling with do-catch and cooperative cancellation.
 
 
 
