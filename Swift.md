@@ -1163,7 +1163,7 @@ This protocol works well for individual requests. However, if you want to store 
 
 **Fix the situation with Type Erasure**
 
-
+Type erasure provides a solution by creating a concrete, non-generic wrapper type that conforms to the protocol and internally stores an instance of the specific concrete type. This wrapper effectively "erases" the associated type information from the public interface, allowing you to treat different concrete implementations of `NetworkRequest` uniformly.
 
 
 
