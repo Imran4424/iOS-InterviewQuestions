@@ -1151,3 +1151,5 @@ var views: [AnyView] = [
 
 Consider a scenario where you define a NetworkRequest protocol with an associated type for the expected ResponseType:
 
+```
+```
