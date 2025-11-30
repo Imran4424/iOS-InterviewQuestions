@@ -1250,6 +1250,26 @@ let productRequest = AnyNetworkRequest(erasing: ProductRequest())
 To declare a function as asynchronous, you use the `async` keyword after the function's parameter list and before its return type. This signifies that the function might perform operations that can suspend its execution without blocking the calling thread.
 
 ```swift
+func fetchData() async -> String {
+    // Simulate an asynchronous operation, e.g., a network request
+    await Task.sleep(2 * 1_000_000_000) // Sleep for 2 seconds
+    return "Data fetched successfully!"
+}
+
+func performCalculations() async throws -> Int { // An async function that can also throw an error
+    // Simulate a potentially failing asynchronous operation
+    if Bool.random() {
+        throw SomeError.calculationFailed
+    }
+    
+    await Task.sleep(1 * 1_000_000_000)
+    
+    return 42
+}
+
+enum SomeError: Error {
+    case calculationFailed
+}
 ```
 
 
