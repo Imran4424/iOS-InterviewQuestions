@@ -1380,9 +1380,12 @@ class UserProfileViewModel: ObservableObject {
 }
 ```
 
+**Individual functions or properties** 
 
+For types that perform both background work and UI updates, we can mark specific functions or properties with `@MainActor` for granular control.
 
-
+```swift
+```
 
 
 
