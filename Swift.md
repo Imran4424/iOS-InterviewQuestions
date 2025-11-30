@@ -1105,7 +1105,7 @@ Type erasure is primarily used in scenarios where you are working with complex, 
 - You want to return different concrete generic types behind a single API.
 - You need to store heterogeneous generic instances in a collection.
 
-##### The Combine Framework (`AnyCancellable`, `AnyPublisher`)
+#### The Combine Framework (`AnyCancellable`, `AnyPublisher`)
 
 The Swift Combine framework makes extensive use of type erasure in its public API to simplify how data streams are managed.
 
@@ -1118,9 +1118,9 @@ When you subscribe to a publisher, you get a cancellable object back. Different 
 You often want a function to return a publisher without revealing all the complex, internal chaining operations used to create it (e.g., a `map`, `filter`, and decode chain). `AnyPublisher` hides these implementation details, offering a clean, simple return type for your APIs.
 
 
+#### SwiftUI framework
 
-
-
+Type erasure in SwiftUI, most notably through `AnyView`, addresses the challenge of working with heterogeneous view types where the specific underlying view type is not known or needs to be hidden.
 
 
 
