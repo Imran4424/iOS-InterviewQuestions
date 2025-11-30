@@ -1191,14 +1191,24 @@ struct Product: Decodable { /* ... */ }
 
 struct UserRequest: NetworkRequest {
     typealias ResponseType = User
+    
     var url: URL { URL(string: "https://api.example.com/users")! }
-    func decode(data: Data) throws -> User { try JSONDecoder().decode(User.self, from: data) }
+    
+    func decode(data: Data) throws -> User { 
+        return try JSONDecoder().decode(User.self, from: data) 
+    }
 }
 
 struct ProductRequest: NetworkRequest {
     typealias ResponseType = Product
-    var url: URL { URL(string: "https://api.example.com/products")! }
-    func decode(data: Data) throws -> Product { try JSONDecoder().decode(Product.self, from: data) }
+    
+    var url: URL { 
+        return URL(string: "https://api.example.com/products")! 
+    }
+
+    func decode(data: Data) throws -> Product { 
+        return try JSONDecoder().decode(Product.self, from: data) 
+    }
 }
 
 let userRequest = AnyNetworkRequest(erasing: UserRequest())
