@@ -1177,7 +1177,9 @@ struct AnyNetworkRequest<T: Decodable>: NetworkRequest {
         self._decode = request.decode
     }
 
-    var url: URL { _url }
+    var url: URL { 
+        return _url 
+    }
 
     func decode(data: Data) throws -> T {
         try _decode(data)
