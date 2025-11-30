@@ -1122,6 +1122,8 @@ You often want a function to return a publisher without revealing all the comple
 
 Type erasure in SwiftUI, most notably through `AnyView`, addresses the challenge of working with heterogeneous view types where the specific underlying view type is not known or needs to be hidden.
 
+If you need to return different concrete View types based on certain conditions, AnyView can wrap these different views, making them appear as a single AnyView type to the caller.
+
 ```swift
     struct ConditionalView: View {
         let showText: Bool
