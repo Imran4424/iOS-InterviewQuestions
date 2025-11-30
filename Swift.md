@@ -1216,10 +1216,10 @@ struct ProductRequest: NetworkRequest {
 let userRequest = AnyNetworkRequest(erasing: UserRequest())
 let productRequest = AnyNetworkRequest(erasing: ProductRequest())
 
-// You can't put them in the same array if their ResponseTypes are different
+// we can't put them in the same array if their ResponseTypes are different
 // let requests: [AnyNetworkRequest] = [userRequest, productRequest] // Compiler error if T is not specified
 
-// But if you had different requests all returning the same ResponseType, you could:
+// But if we had different requests all returning the same ResponseType, we could:
 // let userRequests: [AnyNetworkRequest<User>] = [AnyNetworkRequest(erasing: UserRequest()), AnyNetworkRequest(erasing: AnotherUserRequest())]
 ```
 
@@ -1233,7 +1233,7 @@ let productRequest = AnyNetworkRequest(erasing: ProductRequest())
 - **DispatchQueues**: Uses dispatch queues (like `DispatchQueue`) to manage tasks, which can be serial or concurrent.
 - **Callback-based:** Work is often managed using closures and callbacks, which can lead to complex nested code.
 - **Manual management:** Requires more manual management for tasks like dependency and cancellation, and doesn't have built-in support for cancellation.
-- **Best for:** Legacy code, ultra-low-level threading needs, or when you need very fine-grained control. 
+- **Best for:** Legacy code, ultra-low-level threading needs, or when we need very fine-grained control. 
 
 #### Swift Concurrency (`async/await`)
 
@@ -1247,7 +1247,7 @@ let productRequest = AnyNetworkRequest(erasing: ProductRequest())
 
 #### Marking an `async` function
 
-To declare a function as asynchronous, you use the `async` keyword after the function's parameter list and before its return type. This signifies that the function might perform operations that can suspend its execution without blocking the calling thread.
+To declare a function as asynchronous, we need to use the `async` keyword after the function's parameter list and before its return type. This signifies that the function might perform operations that can suspend its execution without blocking the calling thread.
 
 ```swift
 func fetchData() async -> String {
