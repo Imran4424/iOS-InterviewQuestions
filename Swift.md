@@ -1361,10 +1361,11 @@ Previously, developers had to manually manage this with `DispatchQueue.main.asyn
 
 The `@MainActor` attribute streamlines this process, allowing the Swift compiler to automatically dispatch the necessary code to the main thread when called from a background task, making the code cleaner and less error-prone.
 
+#### Usage
 
+**Entire classes or structs**
 
-
-
+Marking an entire type with `@MainActor` ensures that all methods and properties within it are isolated to the main thread. This is common for UI-related classes, such as `UIViewController` subclasses, `ObservableObject` view models in SwiftUI, and `View` structs themselves in newer Swift versions.
 
 
 
