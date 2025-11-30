@@ -1368,7 +1368,16 @@ The `@MainActor` attribute streamlines this process, allowing the Swift compiler
 Marking an entire type with `@MainActor` ensures that all methods and properties within it are isolated to the main thread. This is common for UI-related classes, such as `UIViewController` subclasses, `ObservableObject` view models in SwiftUI, and `View` structs themselves in newer Swift versions.
 
 ```swift
+@MainActor
+class UserProfileViewModel: ObservableObject {
+    @Published var username: String = "" // Guaranteed to update on main thread
 
+    func loadData() async {
+        // ... fetch data in background ...
+        let fetchedName = "New Name" 
+        self.username = fetchedName // This assignment is safe
+    }
+}
 ```
 
 
