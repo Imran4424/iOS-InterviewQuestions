@@ -1299,7 +1299,7 @@ Task {
 }
 ```
 
-
+### What is an `actor` in Swift?
 
 
 
