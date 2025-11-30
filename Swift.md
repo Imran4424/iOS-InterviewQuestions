@@ -1211,7 +1211,7 @@ let productRequest = AnyNetworkRequest(erasing: ProductRequest())
 // let userRequests: [AnyNetworkRequest<User>] = [AnyNetworkRequest(erasing: UserRequest()), AnyNetworkRequest(erasing: AnotherUserRequest())]
 ```
 
-
+# Concurrency (Modern Swift)
 
 
 
