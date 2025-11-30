@@ -1192,7 +1192,9 @@ struct Product: Decodable { /* ... */ }
 struct UserRequest: NetworkRequest {
     typealias ResponseType = User
     
-    var url: URL { URL(string: "https://api.example.com/users")! }
+    var url: URL { 
+        return URL(string: "https://api.example.com/users")! 
+    }
     
     func decode(data: Data) throws -> User { 
         return try JSONDecoder().decode(User.self, from: data) 
