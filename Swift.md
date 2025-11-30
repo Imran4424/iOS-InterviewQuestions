@@ -1277,6 +1277,17 @@ enum SomeError: Error {
 To call an `async` function, the calling code must also be within an `async` context. Then we must use the `await` keyword before calling the asynchronous function. This signals that the execution might pause at this point until the `async` function completes and returns its result. 
 
 ```swift
+func loadAndProcessData() async {
+    let data = await fetchData() // Call fetchData and await its result
+    print(data)
+
+    do {
+        let result = await performCalculations() // Call performCalculations and await its result (handling potential errors)
+        print("Calculation result: \(result)")
+    } catch {
+        print("Error during calculation: \(error)")
+    }
+}
 ```
 
 
