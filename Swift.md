@@ -1227,9 +1227,11 @@ let productRequest = AnyNetworkRequest(erasing: ProductRequest())
 
 ### What is the difference between GCD and Swift Concurrency (`async/await`)?
 
-**Grand Central Dispatch (GCD)**
+#### Grand Central Dispatch (GCD)
 
 - **Lower-level and C-based**: Built on C-level APIs, providing lower-level control over threading.
+- **DispatchQueues**: Uses dispatch queues (like `DispatchQueue`) to manage tasks, which can be serial or concurrent.
+- 
 
 
 
