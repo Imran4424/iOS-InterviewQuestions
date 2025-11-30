@@ -1328,7 +1328,7 @@ actor BankAccount {
         }
     }
     
-    // Immutable properties are nonisolated by default and can be accessed synchronously
+    // Immutable properties are non-isolated by default and can be accessed synchronously
     let accountNumber: Int = 12345
 }
 
