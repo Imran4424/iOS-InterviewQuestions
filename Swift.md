@@ -1404,7 +1404,37 @@ func updateStatusLabel() {
 We can also use `MainActor.run { ... }` to execute a specific block of code on the main thread when needed.
 
 ```swift
+import SwiftUI
 
+struct ContentView: View {
+    @State private var message: String = "Initial Message"
+
+    var body: some View {
+        VStack {
+            Text(message)
+                .font(.title)
+                .padding()
+
+            Button("Fetch Data and Update UI") {
+                Task {
+                    // Simulate a background operation that fetches data
+                    let fetchedData = await fetchDataFromNetwork()
+
+                    // Switch to the MainActor to update UI
+                    await MainActor.run {
+                        self.message = "Data fetched: \(fetchedData)"
+                    }
+                }
+            }
+        }
+    }
+
+    // Simulate an asynchronous network request or heavy computation
+    private func fetchDataFromNetwork() async -> String {
+        try? await Task.sleep(for: .seconds(2)) // Simulate network delay
+        return "New Data"
+    }
+}
 ```
 
 
