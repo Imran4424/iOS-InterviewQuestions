@@ -1162,3 +1162,43 @@ protocol NetworkRequest {
 This protocol works well for individual requests. However, if you want to store a collection of different `NetworkRequest` types (e.g., an array of requests with different ResponseTypes) or pass them as arguments to a generic network client, you encounter a compiler error because protocols with associated types cannot be used as concrete types.
 
 **Fix the situation with Type Erasure**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
