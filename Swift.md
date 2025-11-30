@@ -1243,9 +1243,14 @@ let productRequest = AnyNetworkRequest(erasing: ProductRequest())
 - **Built-in support:** Includes built-in support for error handling with `do-catch` and cooperative cancellation.
 - **Best for:** Modern Swift projects, improving code readability, and managing complex asynchronous flows where structured concurrency is beneficial. 
 
+### How do you mark an async function and call it?
 
+#### Marking an async function
 
+To declare a function as asynchronous, you use the `async` keyword after the function's parameter list and before its return type. This signifies that the function might perform operations that can suspend its execution without blocking the calling thread.
 
+```swift
+```
 
 
 
