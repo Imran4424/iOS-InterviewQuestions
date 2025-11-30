@@ -1152,5 +1152,9 @@ var views: [AnyView] = [
 Consider a scenario where you define a NetworkRequest protocol with an associated type for the expected ResponseType:
 
 ```swift
-
+protocol NetworkRequest {
+    associatedtype ResponseType: Decodable
+    var url: URL { get }
+    func decode(data: Data) throws -> ResponseType
+}
 ```
