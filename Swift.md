@@ -1274,9 +1274,10 @@ enum SomeError: Error {
 
 #### Calling an `async` function
 
-To call an async function, the calling code must also be within an async context. You then use the await keyword before calling the asynchronous function. This signals that the execution might pause at this point until the async function completes and returns its result. 
+To call an `async` function, the calling code must also be within an `async` context. Then we must use the `await` keyword before calling the asynchronous function. This signals that the execution might pause at this point until the `async` function completes and returns its result. 
 
-
+```swift
+```
 
 
 
