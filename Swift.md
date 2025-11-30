@@ -1314,7 +1314,8 @@ It achieves this safety by ensuring that only one task can access or modify its 
 - **No Inheritance:** Unlike classes, actors do not support inheritance, which simplifies their concurrency model.
 - **`@MainActor`:** Swift includes a special "global actor" called `@MainActor`, which guarantees that all annotated code runs on the main thread. This is essential for safely updating UI elements in frameworks like UIKit and SwiftUI.
 
-
+```swift
+```
 
 
 
