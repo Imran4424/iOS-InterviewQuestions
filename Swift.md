@@ -1149,3 +1149,5 @@ var views: [AnyView] = [
 
 #### Type Erasure in Network Calls
 
+Consider a scenario where you define a NetworkRequest protocol with an associated type for the expected ResponseType:
+
