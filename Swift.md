@@ -1166,6 +1166,23 @@ This protocol works well for individual requests. However, if you want to store 
 Type erasure provides a solution by creating a concrete, non-generic wrapper type that conforms to the protocol and internally stores an instance of the specific concrete type. This wrapper effectively "erases" the associated type information from the public interface, allowing you to treat different concrete implementations of `NetworkRequest` uniformly.
 
 ```swift
+struct AnyNetworkRequest<T: Decodable>: NetworkRequest {
+    typealias ResponseType = T
+
+    private let _url: URL
+    private let _decode: (Data) throws -> T
+
+    init<R: NetworkRequest>(erasing request: R) where R.ResponseType == T {
+        self._url = request.url
+        self._decode = request.decode
+    }
+
+    var url: URL { _url }
+
+    func decode(data: Data) throws -> T {
+        try _decode(data)
+    }
+}
 ```
 
 
