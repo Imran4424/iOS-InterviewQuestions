@@ -1292,7 +1292,12 @@ func loadAndProcessData() async {
 
 If we need to call an `async` function from a synchronous context (e.g., from an `@IBAction` or `onAppear` in SwiftUI), you can wrap the call within a `Task`:
 
-
+```swift
+// Example in a synchronous context (e.g., a button action)
+Task {
+    await loadAndProcessData() // Call the async function within a Task
+}
+```
 
 
 
