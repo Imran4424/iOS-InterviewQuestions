@@ -1229,7 +1229,7 @@ let productRequest = AnyNetworkRequest(erasing: ProductRequest())
 
 **Grand Central Dispatch (GCD)**
 
-
+- **Lower-level and C-based**: Built on C-level APIs, providing lower-level control over threading.
 
 
 
