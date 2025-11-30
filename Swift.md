@@ -1355,9 +1355,11 @@ This is vital in application development because all UI-related operations (like
 
 #### Primary Purpose
 
+The core function of `@MainActor` is to provide compile-time safety guarantees that the annotated code runs in the main thread's execution context.
 
+Previously, developers had to manually manage this with `DispatchQueue.main.async { ... }`.
 
-
+The `@MainActor` attribute streamlines this process, allowing the Swift compiler to automatically dispatch the necessary code to the main thread when called from a background task, making the code cleaner and less error-prone.
 
 
 
