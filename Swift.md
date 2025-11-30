@@ -1100,10 +1100,10 @@ let collectionArray: [AnyCollection<Int>] = [AnyCollection(stack), AnyCollection
 
 #### Where to Use Type Erasure in iOS Development
 
-Type erasure is primarily used in scenarios where you are working with complex, modular architectures and need flexibility in handling diverse data types uniformly. It is prevalent in the Combine framework and any system heavily reliant on generic abstraction.
+Type erasure is primarily used in scenarios where we are working with complex, modular architectures and need flexibility in handling diverse data types uniformly. It is prevalent in the Combine framework and any system heavily reliant on generic abstraction.
 
-- You want to return different concrete generic types behind a single API.
-- You need to store heterogeneous generic instances in a collection.
+- When we want to return different concrete generic types behind a single API.
+- When we need to store heterogeneous generic instances in a collection.
 
 #### The Combine Framework (`AnyCancellable`, `AnyPublisher`)
 
@@ -1111,18 +1111,18 @@ The Swift Combine framework makes extensive use of type erasure in its public AP
 
 **AnyCancellable**
 
-When you subscribe to a publisher, you get a cancellable object back. Different publishers produce different, highly specific `Cancellable` types internally. Combine erases these specific types into the universal `AnyCancellable` wrapper. This allows you to store all subscription tokens in a single `Set<AnyCancellable>` without worrying about their internal generic types.
+When we subscribe to a publisher, we get a cancellable object back. Different publishers produce different, highly specific `Cancellable` types internally. Combine erases these specific types into the universal `AnyCancellable` wrapper. This allows we to store all subscription tokens in a single `Set<AnyCancellable>` without worrying about their internal generic types.
 
 **AnyPublisher**
 
-You often want a function to return a publisher without revealing all the complex, internal chaining operations used to create it (e.g., a `map`, `filter`, and decode chain). `AnyPublisher` hides these implementation details, offering a clean, simple return type for your APIs.
+We often want a function to return a publisher without revealing all the complex, internal chaining operations used to create it (e.g., a `map`, `filter`, and decode chain). `AnyPublisher` hides these implementation details, offering a clean, simple return type for our APIs.
 
 
 #### SwiftUI framework
 
 Type erasure in SwiftUI, most notably through `AnyView`, addresses the challenge of working with heterogeneous view types where the specific underlying view type is not known or needs to be hidden.
 
-If you need to return different concrete View types based on certain conditions, `AnyView` can wrap these different views, making them appear as a single AnyView type to the caller.
+If we need to return different concrete View types based on certain conditions, `AnyView` can wrap these different views, making them appear as a single AnyView type to the caller.
 
 ```swift
 struct ConditionalView: View {
@@ -1138,7 +1138,7 @@ struct ConditionalView: View {
 }
 ```
 
-You cannot directly create an array of View protocol instances if they have associated types or if the specific concrete types are different. `AnyView` allows you to store different view types within a collection by wrapping them.
+We cannot directly create an array of View protocol instances if they have associated types or if the specific concrete types are different. `AnyView` allows us to store different view types within a collection by wrapping them.
 
 ```swift
 var views: [AnyView] = [
@@ -1149,7 +1149,7 @@ var views: [AnyView] = [
 
 #### Type Erasure in Network Calls
 
-Consider a scenario where you define a NetworkRequest protocol with an associated type for the expected ResponseType:
+Consider a scenario where we define a NetworkRequest protocol with an associated type for the expected ResponseType:
 
 ```swift
 protocol NetworkRequest {
@@ -1159,11 +1159,11 @@ protocol NetworkRequest {
 }
 ```
 
-This protocol works well for individual requests. However, if you want to store a collection of different `NetworkRequest` types (e.g., an array of requests with different ResponseTypes) or pass them as arguments to a generic network client, you encounter a compiler error because protocols with associated types cannot be used as concrete types.
+This protocol works well for individual requests. However, if we want to store a collection of different `NetworkRequest` types (e.g., an array of requests with different ResponseTypes) or pass them as arguments to a generic network client, we encounter a compiler error because protocols with associated types cannot be used as concrete types.
 
 **Fix the situation with Type Erasure**
 
-Type erasure provides a solution by creating a concrete, non-generic wrapper type that conforms to the protocol and internally stores an instance of the specific concrete type. This wrapper effectively "erases" the associated type information from the public interface, allowing you to treat different concrete implementations of `NetworkRequest` uniformly.
+Type erasure provides a solution by creating a concrete, non-generic wrapper type that conforms to the protocol and internally stores an instance of the specific concrete type. This wrapper effectively "erases" the associated type information from the public interface, allowing us to treat different concrete implementations of `NetworkRequest` uniformly.
 
 ```swift
 struct AnyNetworkRequest<T: Decodable>: NetworkRequest {
