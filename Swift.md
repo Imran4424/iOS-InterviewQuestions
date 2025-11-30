@@ -1439,9 +1439,9 @@ struct ContentView: View {
 
 #### Key Benefits
 
-
-
-
+- **Compiler Enforcement:** The Swift compiler actively checks for violations. If we try to access a `@MainActor`-isolated property from a non-isolated background context without using `await`, the compiler will produce an error, preventing runtime crashes.
+- **Cleaner Syntax:** It removes the boilerplate of manual `DispatchQueue.main.async` calls.
+- **Seamless Integration:** It integrates smoothly with Swift's modern concurrency features (`async/await`, `Task`)
 
 
 
