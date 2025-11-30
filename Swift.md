@@ -1447,8 +1447,8 @@ struct ContentView: View {
 ### What is `Sendable` and why does it matter?
 
 
+# Concurrency (GCD)
 
-
-
+# Properties, Initializers, and Lifecycle
 
 
