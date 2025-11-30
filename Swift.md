@@ -1311,7 +1311,7 @@ It achieves this safety by ensuring that only one task can access or modify its 
 - **Serial Execution:** An actor manages its operations internally using a private serial executor (queue). This means that even if multiple tasks try to access an actor's methods at the same time, they are processed one after another, in a synchronized manner.
 - **Asynchronous Access:** Accessing an actor's mutable properties or methods from outside the actor's own context requires the `await` keyword. This marks a potential suspension point, allowing the actor to process other pending tasks while the calling task waits for access, preventing the calling thread from being blocked.
 - **Reference Type:** Actors are reference types, similar to classes, meaning that copies refer to the same underlying instance in memory.
-- 
+- **No Inheritance:** Unlike classes, actors do not support inheritance, which simplifies their concurrency model.
 
 
 
