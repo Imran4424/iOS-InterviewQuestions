@@ -1444,7 +1444,7 @@ struct ContentView: View {
 - **Seamless Integration:** It integrates smoothly with Swift's modern concurrency features (`async/await`, `Task`)
 
 
-
+### What is `Sendable` and why does it matter?
 
 
 
