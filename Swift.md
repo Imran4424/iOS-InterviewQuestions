@@ -1309,6 +1309,7 @@ It achieves this safety by ensuring that only one task can access or modify its 
 
 - **Data Race Prevention:** The primary purpose of an actor is to eliminate data races, which occur when multiple threads access and modify shared memory simultaneously, leading to unpredictable crashes and data corruption.
 - **Serial Execution:** An actor manages its operations internally using a private serial executor (queue). This means that even if multiple tasks try to access an actor's methods at the same time, they are processed one after another, in a synchronized manner.
+- **Asynchronous Access:** Accessing an actor's mutable properties or methods from outside the actor's own context requires the await keyword. This marks a potential suspension point, allowing the actor to process other pending tasks while the calling task waits for access, preventing the calling thread from being blocked.
 
 
 
