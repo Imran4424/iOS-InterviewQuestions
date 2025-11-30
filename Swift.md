@@ -1385,6 +1385,18 @@ class UserProfileViewModel: ObservableObject {
 For types that perform both background work and UI updates, we can mark specific functions or properties with `@MainActor` for granular control.
 
 ```swift
+func processImageDataInBackground() async -> UIImage {
+    // Heavy image processing happens off the main thread
+    // ... 
+    await updateStatusLabel() // Hops back to main actor to update UI
+    return resizedImage
+}
+
+@MainActor
+func updateStatusLabel() {
+    // This runs only on the main thread
+    statusLabel.text = "Processing Complete"
+}
 ```
 
 
