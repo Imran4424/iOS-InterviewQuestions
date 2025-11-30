@@ -1147,5 +1147,5 @@ var views: [AnyView] = [
 ]
 ```
 
-
+#### Type Erasure in Network Calls
 
