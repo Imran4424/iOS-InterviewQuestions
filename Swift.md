@@ -1349,7 +1349,7 @@ In short, actor is a variation of class concept with the limitation of no inheri
 
 ### What is the `@MainActor` attribute used for?
 
-
+The @MainActor attribute in Swift is a special global actor used to ensure that the code it annotates always executes on the app's main thread.
 
 
 
