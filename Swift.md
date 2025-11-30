@@ -1241,6 +1241,7 @@ let productRequest = AnyNetworkRequest(erasing: ProductRequest())
 - **Structured concurrency:** Provides a structured way to manage task lifetimes, cancellation, and error handling.
 - `async/await` keywords: Uses `async` to mark functions that can be suspended and `await` to call them, making asynchronous code look and feel more synchronous and readable.
 - **Built-in support:** Includes built-in support for error handling with `do-catch` and cooperative cancellation.
+- **Best for:** Modern Swift projects, improving code readability, and managing complex asynchronous flows where structured concurrency is beneficial. 
 
 
 
