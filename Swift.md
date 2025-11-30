@@ -1232,6 +1232,7 @@ let productRequest = AnyNetworkRequest(erasing: ProductRequest())
 - **Lower-level and C-based**: Built on C-level APIs, providing lower-level control over threading.
 - **DispatchQueues**: Uses dispatch queues (like `DispatchQueue`) to manage tasks, which can be serial or concurrent.
 - **Callback-based:** Work is often managed using closures and callbacks, which can lead to complex nested code.
+- **Manual management:** Requires more manual management for tasks like dependency and cancellation, and doesn't have built-in support for cancellation.
 
 
 
