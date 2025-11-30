@@ -1312,7 +1312,7 @@ It achieves this safety by ensuring that only one task can access or modify its 
 - **Asynchronous Access:** Accessing an actor's mutable properties or methods from outside the actor's own context requires the `await` keyword. This marks a potential suspension point, allowing the actor to process other pending tasks while the calling task waits for access, preventing the calling thread from being blocked.
 - **Reference Type:** Actors are reference types, similar to classes, meaning that copies refer to the same underlying instance in memory.
 - **No Inheritance:** Unlike classes, actors do not support inheritance, which simplifies their concurrency model.
-- 
+- **`@MainActor`:** Swift includes a special "global actor" called @MainActor, which guarantees that all annotated code runs on the main thread. This is essential for safely updating UI elements in frameworks like UIKit and SwiftUI.
 
 
 
