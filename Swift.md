@@ -1446,6 +1446,7 @@ struct ContentView: View {
 
 ### What is `Sendable` and why does it matter?
 
+The `Sendable` protocol in Swift is a marker protocol that assures the compiler a type can be safely shared across different concurrency domains (tasks or actors) without causing data races or memory corruption.
 
 # Concurrency (GCD)
 
