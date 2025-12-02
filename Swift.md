@@ -1484,7 +1484,9 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 ### Why does calling `DispatchQueue.main.sync { ... }` from the main thread cause a deadlock?
 
+### What are global dispatch queues and QoS classes?
 
+### How do you perform work in the background and then update UI on the main thread?
 
 # Properties, Initializers, and Lifecycle
 
