@@ -1466,6 +1466,7 @@ By enforcing `Sendable` conformance, the compiler provides several crucial benef
 The rules for `Sendable` conformance vary depending on whether a type is a value type or a reference type:
 
 - **Value Types (Structs and Enums):** These are inherently thread-safe because they are copied when passed, so each task gets its own unique instance. They automatically conform to `Sendable` if all their stored properties/associated values are also `Sendable`.
+- **Actors:** Actors manage their internal state with a serial executor, making them automatically `Sendable` because access is inherently synchronized.
 
 
 
