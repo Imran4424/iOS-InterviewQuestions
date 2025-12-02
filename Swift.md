@@ -1508,8 +1508,11 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 ### How to implement a simple throttle/debounce using GCD?
 
+### How to ensure a singleton is thread-safe using GCD?
 
+### What is `asyncAfter` and when to use it?
 
+`DispatchQueue.asyncAfter`
 
 
 
