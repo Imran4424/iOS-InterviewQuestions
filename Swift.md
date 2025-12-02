@@ -1494,7 +1494,9 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 ### What is `DispatchWorkItem` and why is it useful?
 
-### 
+### What is a barrier block? Explain `.barrier` on concurrent queues.
+
+### What is a race condition? How to avoid it with GCD?
 
 
 # Properties, Initializers, and Lifecycle
