@@ -1452,6 +1452,9 @@ It has no methods or properties to implement; it is a compile-time guarantee of 
 
 #### Why `Sendable` Matters
 
+The importance of `Sendable` lies in Swift's modern concurrency model, which aims to eliminate data races at compile time rather than runtime. A data race occurs when multiple tasks access the same mutable memory location simultaneously, and at least one of them is performing a write operation, leading to unpredictable and hard-to-debug bugs. 
+
+By enforcing `Sendable` conformance, the compiler provides several crucial benefits:
 
 
 
