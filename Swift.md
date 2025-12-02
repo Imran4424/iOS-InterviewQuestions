@@ -1498,6 +1498,20 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 ### What is a race condition? How to avoid it with GCD?
 
+### Difference between GCD and `Operation` / `OperationQueue`?
+
+### Common deadlock patterns with GCD?
+
+### Why is GCD better than creating threads manually?
+
+### What is `DispatchSource`? When to use it?
+
+### 
+
+
+
+
+
 
 # Properties, Initializers, and Lifecycle
 
