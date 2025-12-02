@@ -1474,12 +1474,6 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 - **Closures:** Functions and closures can be marked with the @Sendable attribute. This requires that any values the closure captures are also Sendable and are captured by value.
 
 
-
-
-
-
-
-
 # Concurrency (GCD)
 
 # Properties, Initializers, and Lifecycle
