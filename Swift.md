@@ -1461,10 +1461,11 @@ By enforcing `Sendable` conformance, the compiler provides several crucial benef
 - **Enforces Concurrency Rules:** It dictates how different types can interact with concurrency features like `Task`, `TaskGroup`, and actors. When you pass a non-`Sendable` type across an actor boundary or into a new `Task`, the compiler emits a warning or error, forcing you to use safe patterns.
 - **Clarity and Documentation:** Marking a type as `Sendable` clearly communicates to other developers that the type is designed to be thread-safe.
 
+#### How Types Achieve `Sendable` Conformance
 
+The rules for `Sendable` conformance vary depending on whether a type is a value type or a reference type:
 
-
-
+- **Value Types (Structs and Enums):** These are inherently thread-safe because they are copied when passed, so each task gets its own unique instance. They automatically conform to `Sendable` if all their stored properties/associated values are also `Sendable`.
 
 
 
