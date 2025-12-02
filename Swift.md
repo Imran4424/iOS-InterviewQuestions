@@ -1450,6 +1450,11 @@ The `Sendable` protocol in Swift is a marker protocol that assures the compiler 
 
 It has no methods or properties to implement; it is a compile-time guarantee of thread safety.
 
+#### Why `Sendable` Matters
+
+
+
+
 # Concurrency (GCD)
 
 # Properties, Initializers, and Lifecycle
