@@ -1467,6 +1467,10 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 - **Value Types (Structs and Enums):** These are inherently thread-safe because they are copied when passed, so each task gets its own unique instance. They automatically conform to `Sendable` if all their stored properties/associated values are also `Sendable`.
 - **Actors:** Actors manage their internal state with a serial executor, making them automatically `Sendable` because access is inherently synchronized.
+- **Classes (Reference Types):** Classes present a challenge because multiple tasks can hold a reference to the same mutable instance. For a class to be `Sendable`, it typically must be:
+  - Marked as `final` (cannot be subclassed).
+  - Have only immutable (`let`) stored properties.
+  - If it has mutable properties, it must use `@unchecked Sendable` and manually manage thread safety using internal synchronization mechanisms like locks or queues.
 
 
 
