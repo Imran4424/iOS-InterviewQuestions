@@ -1458,7 +1458,7 @@ By enforcing `Sendable` conformance, the compiler provides several crucial benef
 
 - **Prevents Data Races:** The primary goal is to prevent crashes and corrupted data that arise from unsafe concurrent access to shared mutable state.
 - `Compile-Time Safety:` Instead of finding subtle threading bugs during runtime or in production, the compiler flags potential issues as errors during development (especially with Swift 6's stricter enforcement).
-- **Enforces Concurrency Rules:** It dictates how different types can interact with concurrency features like `Task`, `TaskGroup`, and actors. When you pass a non-`Sendable` type across an actor boundary or into a new `Task`, the compiler emits a warning or error, forcing you to use safe patterns.
+- **Enforces Concurrency Rules:** It dictates how different types can interact with concurrency features like `Task`, `TaskGroup`, and actors. When we pass a non-`Sendable` type across an actor boundary or into a new `Task`, the compiler emits a warning or error, forcing us to use safe patterns.
 - **Clarity and Documentation:** Marking a type as `Sendable` clearly communicates to other developers that the type is designed to be thread-safe.
 
 #### How Types Achieve `Sendable` Conformance
@@ -1475,6 +1475,12 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 
 # Concurrency (GCD)
+
+### What is Grand Central Dispatch (GCD), and why is it used?
+
+### What is a dispatch queue? Explain serial vs concurrent dispatch queues.
+
+### What’s the difference between `async` and `sync` in GCD?
 
 # Properties, Initializers, and Lifecycle
 
