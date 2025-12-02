@@ -1488,6 +1488,8 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 ### How do you perform work in the background and then update UI on the main thread?
 
+### What is `DispatchGroup` and when to use it?
+
 # Properties, Initializers, and Lifecycle
 
 
