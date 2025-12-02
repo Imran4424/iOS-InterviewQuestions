@@ -1506,7 +1506,7 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 ### What is `DispatchSource`? When to use it?
 
-### How to implement a simple debounce using GCD?
+### How to implement a simple throttle/debounce using GCD?
 
 
 
