@@ -1482,6 +1482,10 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 ### What’s the difference between `async` and `sync` in GCD?
 
+### Why does calling `DispatchQueue.main.sync { ... }` from the main thread cause a deadlock?
+
+
+
 # Properties, Initializers, and Lifecycle
 
 
