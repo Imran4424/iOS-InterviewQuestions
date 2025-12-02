@@ -1490,6 +1490,9 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 ### What is `DispatchGroup` and when to use it?
 
+### What is `DispatchSemaphore` and when to use it?
+
+
 # Properties, Initializers, and Lifecycle
 
 
