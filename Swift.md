@@ -1486,7 +1486,7 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 ### What are global dispatch queues and QoS classes?
 
-### How do you perform work in the background and then update UI on the main thread?
+### How to perform work in the background and then update UI on the main thread?
 
 ### What is `DispatchGroup` and when to use it?
 
@@ -1506,7 +1506,7 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 ### What is `DispatchSource`? When to use it?
 
-### 
+### How to implement a simple debounce using GCD?
 
 
 
