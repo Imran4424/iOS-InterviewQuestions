@@ -1471,6 +1471,7 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
   - Marked as `final` (cannot be subclassed).
   - Have only immutable (`let`) stored properties.
   - If it has mutable properties, it must use `@unchecked Sendable` and manually manage thread safety using internal synchronization mechanisms like locks or queues.
+- **Closures:** Functions and closures can be marked with the @Sendable attribute. This requires that any values the closure captures are also Sendable and are captured by value.
 
 
 
