@@ -1505,7 +1505,8 @@ A dispatch queue is a lightweight object managed by Grand Central Dispatch (GCD)
 
 These queues are a core part of systems like Apple's Grand Central Dispatch (GCD) and allow applications to perform tasks either on the main thread or on background threads. There are two main types:
 
-- Serial Queues
+- Serial queues
+- Concurrent queues
 
 ### What’s the difference between `async` and `sync` in GCD?
 
