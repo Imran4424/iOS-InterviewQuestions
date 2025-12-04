@@ -1512,9 +1512,11 @@ These queues are a core part of systems like Apple's Grand Central Dispatch (GCD
 
 | Feature | Serial Queue | 	Concurrent Queue |
 | -------------------- | ------------------------------- | --------- |
-| Execution           |  | |
+| Execution | Executes one task at a time. | Executes multiple tasks simultaneously (in parallel, if system resources allow). |
 | Order of Completion |  | |
 | Thread Usage |  | |
+| Primary Use Case |  | |
+| System Examples |  | |
 
 ### What’s the difference between `async` and `sync` in GCD?
 
