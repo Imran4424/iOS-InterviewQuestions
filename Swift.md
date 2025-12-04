@@ -1513,7 +1513,7 @@ These queues are a core part of systems like Apple's Grand Central Dispatch (GCD
 | Feature | Serial Queue | 	Concurrent Queue |
 | -------------------- | ------------------------------- | --------- |
 | Execution | Executes one task at a time. | Executes multiple tasks simultaneously (in parallel, if system resources allow). |
-| Order of Completion |  | |
+| Order of Completion | Predictable. Tasks finish in the exact order they were added (FIFO). | Unpredictable. Tasks start in order but can finish in any order depending on the task's complexity and system conditions. |
 | Thread Usage |  | |
 | Primary Use Case |  | |
 | System Examples |  | |
