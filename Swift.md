@@ -1478,6 +1478,13 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 ### What is Grand Central Dispatch (GCD), and why is it used?
 
+#### Grand Central Dispatch (GCD)
+
+- **Lower-level and C-based**: Built on C-level APIs, providing lower-level control over threading.
+- **DispatchQueues**: Uses dispatch queues (like `DispatchQueue`) to manage tasks, which can be serial or concurrent.
+- **Callback-based:** Work is often managed using closures and callbacks, which can lead to complex nested code.
+- **Manual management:** Requires more manual management for tasks like dependency and cancellation, and doesn't have built-in support for cancellation.
+- **Best for:** Legacy code, ultra-low-level threading needs, or when we need very fine-grained control. 
 
 ### What is a dispatch queue? Explain serial vs concurrent dispatch queues.
 
