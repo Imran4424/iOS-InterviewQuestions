@@ -1499,11 +1499,9 @@ Grand Central Dispatch (GCD) is an Apple technology that manages concurrent task
 - **Simplified Concurrency:** It provides a higher-level abstraction that makes it easier to write multi-threaded code, as developers can focus on the work itself rather than the intricacies of thread management.
 - **Efficient Resource Use:** GCD matches tasks to available system resources, leading to more efficient and faster execution. 
 
-
-
-
-
 ### What is a dispatch queue? Explain serial vs concurrent dispatch queues.
+
+A dispatch queue is a lightweight object managed by Grand Central Dispatch (GCD) to which applications submit tasks (as blocks of code or functions) for execution.
 
 ### What’s the difference between `async` and `sync` in GCD?
 
