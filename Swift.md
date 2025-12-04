@@ -1484,6 +1484,8 @@ Grand Central Dispatch (GCD) is an Apple technology that manages concurrent task
 
 #### How it works
 
+
+
 ### What is a dispatch queue? Explain serial vs concurrent dispatch queues.
 
 ### What’s the difference between `async` and `sync` in GCD?
