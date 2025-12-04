@@ -1510,7 +1510,11 @@ These queues are a core part of systems like Apple's Grand Central Dispatch (GCD
 
 #### Serial vs. Concurrent Dispatch Queues
 
-
+| Feature | Serial Queue | 	Concurrent Queue |
+| -------------------- | ------------------------------- | --------- |
+| Execution           |  | |
+| Order of Completion |  | |
+| Thread Usage |  | |
 
 ### What’s the difference between `async` and `sync` in GCD?
 
