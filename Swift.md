@@ -1496,7 +1496,7 @@ Grand Central Dispatch (GCD) is an Apple technology that manages concurrent task
 
 - **Improved Performance:** By offloading heavy computations to background threads, GCD allows the main thread to remain free for handling user interface updates and interactions.
 - **Enhanced Responsiveness:** Users experience a smoother, more responsive application because the UI is not blocked by time-consuming tasks.
-- 
+- **Simplified Concurrency:** It provides a higher-level abstraction that makes it easier to write multi-threaded code, as developers can focus on the work itself rather than the intricacies of thread management.
 
 
 
