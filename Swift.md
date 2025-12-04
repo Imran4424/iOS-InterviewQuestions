@@ -1482,11 +1482,7 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 Grand Central Dispatch (GCD) is an Apple technology that manages concurrent tasks by simplifying thread management. It is used to enhance application performance and responsiveness by abstracting the complexities of multithreading, allowing developers to submit work to queues instead of managing threads directly. This enables applications to run multiple operations, such as background downloads or image processing, without freezing the user interface. 
 
-- **Lower-level and C-based**: Built on C-level APIs, providing lower-level control over threading.
-- **DispatchQueues**: Uses dispatch queues (like `DispatchQueue`) to manage tasks, which can be serial or concurrent.
-- **Callback-based:** Work is often managed using closures and callbacks, which can lead to complex nested code.
-- **Manual management:** Requires more manual management for tasks like dependency and cancellation, and doesn't have built-in support for cancellation.
-- **Best for:** Legacy code, ultra-low-level threading needs, or when we need very fine-grained control. 
+#### How it works
 
 ### What is a dispatch queue? Explain serial vs concurrent dispatch queues.
 
