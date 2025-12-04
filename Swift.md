@@ -1478,6 +1478,7 @@ The rules for `Sendable` conformance vary depending on whether a type is a value
 
 ### What is Grand Central Dispatch (GCD), and why is it used?
 
+
 ### What is a dispatch queue? Explain serial vs concurrent dispatch queues.
 
 ### What’s the difference between `async` and `sync` in GCD?
