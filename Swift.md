@@ -1518,6 +1518,8 @@ These queues are a core part of systems like Apple's Grand Central Dispatch (GCD
 | Primary Use Case | Synchronization and protecting shared resources from data races by ensuring only one task modifies data at a time. | Performance improvement by executing independent, long-running tasks simultaneously (e.g., image downloads, data processing). |
 | System Examples | The Main Dispatch Queue (`DispatchQueue.main`) is the primary system-provided serial queue for UI updates. | The Global Concurrent Queues (`DispatchQueue.global()`) are system-provided queues for background work with varying priorities (QoS). |
 
+In summary, a serial queue provides a safe, ordered environment for dependent tasks or shared resource access, while a concurrent queue maximizes performance by running independent tasks in parallel.
+
 ### What’s the difference between `async` and `sync` in GCD?
 
 ### Why does calling `DispatchQueue.main.sync { ... }` from the main thread cause a deadlock?
