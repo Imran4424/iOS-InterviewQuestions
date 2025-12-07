@@ -1564,6 +1564,16 @@ Global dispatch queues are system-provided concurrent queues that are shared acr
 
 Developers access these queues using `DispatchQueue.global()` and assign a **Quality of Service (QoS) class** to specify the priority and importance of the work being performed.
 
+#### Global Dispatch Queues
+
+Global queues abstract away thread management, allowing the system to decide the optimal number of threads to use based on the number of available CPU cores and current system load. They are always concurrent, meaning tasks start in the order they are submitted (FIFO), but can complete in any order.
+
+The main use of global queues is to offload resource-intensive or long-running tasks from the main thread to prevent the app from becoming unresponsive.
+
+#### Quality of Service (QoS) Classes
+
+Quality of Service (QoS) classes are used to categorize work based on its urgency and importance to the user. By assigning the correct QoS, we help the system prioritize resource allocation (CPU time, energy usage) to ensure a smooth and responsive user experience.
+
 ### How to perform work in the background and then update UI on the main thread?
 
 ### What is `DispatchGroup` and when to use it?
