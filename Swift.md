@@ -1589,7 +1589,40 @@ To perform work in the background and safely update the user interface (UI) on t
 
 This is the standard and safest pattern in Swift for asynchronous programming in iOS and macOS applications.
 
-```
+```swift
+import UIKit // Required for UI elements like UILabel, UIImage, etc.
+import Foundation // Required for background tasks like networking
+
+// Assume you have an IBOutlet for a label in your ViewController
+@IBOutlet weak var statusLabel: UILabel!
+
+func performBackgroundWorkAndUpdateUI() {
+    // 1. Start a long-running task on a global background queue.
+    // We use a high priority QoS for immediate user feedback.
+    DispatchQueue.global(qos: .userInitiated).async {
+        
+        // --- This code runs on a background thread ---
+        print("Starting long network request...")
+        
+        // Simulate a long network/processing task (e.g., fetching data from the web)
+        sleep(2) // Do not use sleep in real apps; this just simulates work
+        let dataResult = "Data fetched successfully!"
+        
+        print("Network request finished.")
+
+        // 2. Switch back to the main queue to safely update UI components.
+        DispatchQueue.main.async {
+            
+            // --- This code runs on the Main thread ---
+            print("Updating UI on the main thread.")
+            
+            // It is safe to interact with UIKit components here:
+            self.statusLabel.text = dataResult
+            self.statusLabel.textColor = UIColor.green
+        }
+    }
+}
+
 ```
 
 
