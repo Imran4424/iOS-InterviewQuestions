@@ -1529,7 +1529,7 @@ The difference between `async` (asynchronous) and `sync` (synchronous) in Grand 
 
 | Feature | `async` (Asynchronous) | `sync` (Synchronous) |
 | ------- | ------------ | ---------------- |
-| Caller Behavior |  | | 
+| Caller Behavior | Non-blocking; returns immediately. | | 
 
 ### Why does calling `DispatchQueue.main.sync { ... }` from the main thread cause a deadlock?
 
