@@ -1585,6 +1585,8 @@ The primary QoS classes available are (from highest priority to lowest):
 - `default`: This priority falls between `userInitiated` and `utility`. It is used if no other QoS is specified.
 - `unspecified`: Used when no QoS information is available, and the system must infer the priority.
 
+### How to perform work in the background and then update UI on the main thread?
+
 To perform work in the background and safely update the user interface (UI) on the main thread, we can combine `DispatchQueue.global().async` for the background work with `DispatchQueue.main.async` for the UI update.
 
 This is the standard and safest pattern in Swift for asynchronous programming in iOS and macOS applications.
@@ -1632,8 +1634,6 @@ func performBackgroundWorkAndUpdateUI() {
    - Once the background work is complete, this nested closure submits a new task specifically to the main serial queue.
    - The main queue is the only queue that is allowed to interact with Apple's UIKit (iOS) or AppKit (macOS) frameworks.
    - Because it uses `async`, it doesn't block the background thread from finishing its own context, and the task safely waits for its turn on the main thread.
-
-### How to perform work in the background and then update UI on the main thread?
 
 ### What is `DispatchGroup` and when to use it?
 
