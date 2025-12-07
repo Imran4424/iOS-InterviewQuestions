@@ -1531,7 +1531,7 @@ The difference between `async` (asynchronous) and `sync` (synchronous) in Grand 
 | ------- | ------------ | ---------------- |
 | Caller Behavior | Non-blocking; returns immediately. | Blocking; waits for the task to complete. |
 | Current Thread | Free to execute subsequent code. | Stalls until the enqueued task is done. |
-| Responsiveness | Free to execute subsequent code. | Stalls until the enqueued task is done. |
+| Responsiveness | Improves application responsiveness (e.g., keeps UI fluid). | Stalls until the enqueued task is done. |
 
 
 ### Why does calling `DispatchQueue.main.sync { ... }` from the main thread cause a deadlock?
