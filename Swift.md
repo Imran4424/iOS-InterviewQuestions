@@ -1486,7 +1486,7 @@ Grand Central Dispatch (GCD) is an Apple technology that manages concurrent task
 
 - **Tasks and Queues:** GCD is built on two main primitives: 
   - Tasks: which are blocks of code to be executed.
-  - Queues: Which are where you submit these tasks.
+  - Queues: Which are where we submit these tasks.
 - **Dispatch Queues:** These are used to manage the execution of tasks.
   - Serial Queues: Execute one task at a time.
   - Concurrent Queues: Execute tasks in parallel, potentially finishing in any order.
@@ -1524,21 +1524,24 @@ In summary, a serial queue provides a safe, ordered environment for dependent ta
 
 The difference between `async` (asynchronous) and `sync` (synchronous) in Grand Central Dispatch (GCD) lies in how they affect the calling thread from which the task is submitted to a dispatch queue.
 
-- **`sync` is blocking:** When you call `dispatch_sync` (or `DispatchQueue.sync` in Swift), the current thread **waits** until the enqueued task has finished executing before it can continue with the next line of code.
-- **`async` is non-blocking:** When you call `dispatch_async` (or `DispatchQueue.async` in Swift), the current thread immediately continues executing the code that follows the `async` call, without waiting for the enqueued task to finish. The task is scheduled to run at some point in the future on an appropriate thread managed by GCD.
+- **`sync` is blocking:** When we call `dispatch_sync` (or `DispatchQueue.sync` in Swift), the current thread **waits** until the enqueued task has finished executing before it can continue with the next line of code.
+- **`async` is non-blocking:** When we call `dispatch_async` (or `DispatchQueue.async` in Swift), the current thread immediately continues executing the code that follows the `async` call, without waiting for the enqueued task to finish. The task is scheduled to run at some point in the future on an appropriate thread managed by GCD.
 
 | Feature | `async` (Asynchronous) | `sync` (Synchronous) |
 | ------- | ------------ | ---------------- |
 | Caller Behavior | Non-blocking; returns immediately. | Blocking; waits for the task to complete. |
 | Current Thread | Free to execute subsequent code. | Stalls until the enqueued task is done. |
 | Responsiveness | Improves application responsiveness (e.g., keeps UI fluid). | Can make the application unresponsive if used on the main thread for long tasks. |
-| Risk | Safer pattern in general; avoids deadlocks in most cases. | Can easily cause a deadlock if misused (e.g., calling `sync` on the same serial queue you are already running on). |
+| Risk | Safer pattern in general; avoids deadlocks in most cases. | Can easily cause a deadlock if misused (e.g., calling `sync` on the same serial queue we are already running on). |
 | Primary Use | Offloading long-running work to background. | Synchronizing access to shared data (thread safety) or waiting for a necessary result. |
 
 
 ### Why does calling `DispatchQueue.main.sync { ... }` from the main thread cause a deadlock?
 
 Calling `DispatchQueue.main.sync { ... }` from the main thread causes an immediate and inevitable deadlock because the main queue is a serial queue, and the current (main) thread is already busy executing the code before the sync call.
+
+1. **The Main Thread Submits a Task:** We are currently executing code on the main thread. When we call DispatchQueue.main.sync { ... }, we are telling that same main queue: "Hey, add this new block of code to the end of our queue."
+2. **`sync` Blocks the Caller:** 
 
 ### What are global dispatch queues and QoS classes?
 
