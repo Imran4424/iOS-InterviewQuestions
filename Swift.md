@@ -1541,7 +1541,11 @@ The difference between `async` (asynchronous) and `sync` (synchronous) in Grand 
 Calling `DispatchQueue.main.sync { ... }` from the main thread causes an immediate and inevitable deadlock because the main queue is a serial queue, and the current (main) thread is already busy executing the code before the sync call.
 
 1. **The Main Thread Submits a Task:** We are currently executing code on the main thread. When we call DispatchQueue.main.sync { ... }, we are telling that same main queue: "Hey, add this new block of code to the end of our queue."
-2. **`sync` Blocks the Caller:** 
+2. **`sync` Blocks the Caller:** Because we used `sync`, the main thread (the caller) must wait for the task it just submitted to finish executing before the main thread can continue running any further code.
+3. **The Queue Is Blocked:** The main queue is a serial queue, meaning it can only run one task at a time. The main queue is currently occupied by the task that called the `sync` function.
+4. **The Perpetual Wait:** The new block of code is waiting for its turn in the queue, but it can never start because the queue is blocked by the waiting main thread. Simultaneously, the main thread is waiting for the new block to fin
+
+
 
 ### What are global dispatch queues and QoS classes?
 
