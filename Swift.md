@@ -1574,6 +1574,13 @@ The main use of global queues is to offload resource-intensive or long-running t
 
 Quality of Service (QoS) classes are used to categorize work based on its urgency and importance to the user. By assigning the correct QoS, we help the system prioritize resource allocation (CPU time, energy usage) to ensure a smooth and responsive user experience.
 
+The system prioritizes tasks with higher QoS levels, meaning they get executed sooner and with more resources than lower-priority tasks.
+
+The primary QoS classes available are (from highest priority to lowest):
+
+- 
+
+
 ### How to perform work in the background and then update UI on the main thread?
 
 ### What is `DispatchGroup` and when to use it?
