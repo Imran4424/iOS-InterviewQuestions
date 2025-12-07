@@ -1624,6 +1624,16 @@ func performBackgroundWorkAndUpdateUI() {
 }
 ```
 
+1. `DispatchQueue.global(qos: ...).async { ... }`:
+   - This function call immediately returns control to the calling thread (usually the main thread if this code is in a UI handler), allowing the UI to remain responsive.
+   - The closure (the code inside `{...}`) is scheduled to run on a background thread managed by the system.
+   - Never update UI elements inside this background block; it will cause crashes or unpredictable behavior.
+2. `DispatchQueue.main.async { ... }`:
+   - Once the background work is complete, this nested closure submits a new task specifically to the main serial queue.
+   - The main queue is the only queue that is allowed to interact with Apple's UIKit (iOS) or AppKit (macOS) frameworks.
+   - Because it uses `async`, it doesn't block the background thread from finishing its own context, and the task safely waits for its turn on the main thread.
+
+
 
 ### How to perform work in the background and then update UI on the main thread?
 
