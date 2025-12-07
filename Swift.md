@@ -1538,6 +1538,8 @@ The difference between `async` (asynchronous) and `sync` (synchronous) in Grand 
 
 ### Why does calling `DispatchQueue.main.sync { ... }` from the main thread cause a deadlock?
 
+Calling `DispatchQueue.main.sync { ... }` from the main thread causes an immediate and inevitable deadlock because the main queue is a serial queue, and the current (main) thread is already busy executing the code before the sync call.
+
 ### What are global dispatch queues and QoS classes?
 
 ### How to perform work in the background and then update UI on the main thread?
