@@ -1556,7 +1556,7 @@ Imagine the main thread is a car driving down a single-lane tunnel (the serial m
 - Neither car can move forward, and the tunnel is jammed forever.
 
 
-In a word, nested main thread causes deadlock.
+**In a word, nested main thread causes deadlock.**
 
 ### What are global dispatch queues and QoS classes?
 
