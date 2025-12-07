@@ -1533,6 +1533,7 @@ The difference between `async` (asynchronous) and `sync` (synchronous) in Grand 
 | Current Thread | Free to execute subsequent code. | Stalls until the enqueued task is done. |
 | Responsiveness | Improves application responsiveness (e.g., keeps UI fluid). | Can make the application unresponsive if used on the main thread for long tasks. |
 | Risk | Safer pattern in general; avoids deadlocks in most cases. | Can easily cause a deadlock if misused (e.g., calling `sync` on the same serial queue you are already running on). |
+| Primary Use | Offloading long-running work to background. | Synchronizing access to shared data (thread safety) or waiting for a necessary result. |
 
 
 ### Why does calling `DispatchQueue.main.sync { ... }` from the main thread cause a deadlock?
