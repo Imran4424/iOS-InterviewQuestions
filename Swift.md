@@ -1547,6 +1547,8 @@ Calling `DispatchQueue.main.sync { ... }` from the main thread causes an immedia
 
 The two tasks are waiting for each other indefinitely, resulting in a system deadlock where our application stops responding entirely.
 
+#### Analogy: The Single-Lane Tunnel
+
 ### What are global dispatch queues and QoS classes?
 
 ### How to perform work in the background and then update UI on the main thread?
