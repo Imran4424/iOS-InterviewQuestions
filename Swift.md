@@ -1578,7 +1578,9 @@ The system prioritizes tasks with higher QoS levels, meaning they get executed s
 
 The primary QoS classes available are (from highest priority to lowest):
 
-- 
+- `userInteractive`: The highest priority, for tasks that need to be finished immediately to ensure the user can continue interacting with the app (e.g., animations, handling UI events). This work typically runs on or has priority access to the main thread resources.
+- `userInitiated`: For tasks initiated by the user that require immediate results to continue interaction (e.g., loading a document after a button tap, fetching essential data from a server). These tasks are high priority but run in the background.
+- `utility`: For long-running tasks that don't need immediate results and usually have a progress indicator (e.g., downloading large files, complex data processing, synchronizing data). The system prioritizes energy efficiency over speed for these tasks.
 
 
 ### How to perform work in the background and then update UI on the main thread?
