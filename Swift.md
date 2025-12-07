@@ -1549,6 +1549,15 @@ The two tasks are waiting for each other indefinitely, resulting in a system dea
 
 #### Analogy: The Single-Lane Tunnel
 
+Imagine the main thread is a car driving down a single-lane tunnel (the serial main queue).
+
+- The car (main thread) pulls up to a stop sign and says, "I need to go into the tunnel and wait for the next car to pass before I can move." (This is the `sync` request.)
+- The "next car" it is waiting for is itself, which is stuck in traffic behind the first car.
+- Neither car can move forward, and the tunnel is jammed forever.
+
+
+
+
 ### What are global dispatch queues and QoS classes?
 
 ### How to perform work in the background and then update UI on the main thread?
