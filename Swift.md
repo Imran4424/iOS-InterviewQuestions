@@ -1545,7 +1545,7 @@ Calling `DispatchQueue.main.sync { ... }` from the main thread causes an immedia
 3. **The Queue Is Blocked:** The main queue is a serial queue, meaning it can only run one task at a time. The main queue is currently occupied by the task that called the `sync` function.
 4. **The Perpetual Wait:** The new block of code is waiting for its turn in the queue, but it can never start because the queue is blocked by the waiting main thread. Simultaneously, the main thread is waiting for the new block to fin
 
-
+The two tasks are waiting for each other indefinitely, resulting in a system deadlock where our application stops responding entirely.
 
 ### What are global dispatch queues and QoS classes?
 
