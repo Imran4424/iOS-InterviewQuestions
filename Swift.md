@@ -1593,7 +1593,7 @@ This is the standard and safest pattern in Swift for asynchronous programming in
 import UIKit // Required for UI elements like UILabel, UIImage, etc.
 import Foundation // Required for background tasks like networking
 
-// Assume you have an IBOutlet for a label in your ViewController
+// Assume we have an IBOutlet for a label in our ViewController
 @IBOutlet weak var statusLabel: UILabel!
 
 func performBackgroundWorkAndUpdateUI() {
