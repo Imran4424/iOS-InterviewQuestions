@@ -1635,7 +1635,11 @@ func performBackgroundWorkAndUpdateUI() {
    - The main queue is the only queue that is allowed to interact with Apple's UIKit (iOS) or AppKit (macOS) frameworks.
    - Because it uses `async`, it doesn't block the background thread from finishing its own context, and the task safely waits for its turn on the main thread.
 
-### What is `DispatchGroup` and when to use it?
+### What is `DispatchGroup` and when to use it?\
+
+A `DispatchGroup` is a Grand Central Dispatch (GCD) mechanism that allows us to aggregate a set of different tasks and monitor them as a single unit. It essentially acts as a **counter** for tasks that have started but not yet completed. 
+
+When all the tasks associated with the group finish executing (the internal counter reaches zero), the group can either execute a completion handler or unblock a thread that is waiting for the results.
 
 ### What is `DispatchSemaphore` and when to use it?
 
