@@ -1525,6 +1525,7 @@ In summary, a serial queue provides a safe, ordered environment for dependent ta
 The difference between `async` (asynchronous) and `sync` (synchronous) in Grand Central Dispatch (GCD) lies in how they affect the calling thread from which the task is submitted to a dispatch queue.
 
 - **`sync` is blocking:** When you call dispatch_sync (or DispatchQueue.sync in Swift), the current thread waits until the enqueued task has finished executing before it can continue with the next line of code.
+- sf
 
 
 ### Why does calling `DispatchQueue.main.sync { ... }` from the main thread cause a deadlock?
