@@ -1527,6 +1527,9 @@ The difference between `async` (asynchronous) and `sync` (synchronous) in Grand 
 - **`sync` is blocking:** When you call `dispatch_sync` (or `DispatchQueue.sync` in Swift), the current thread **waits** until the enqueued task has finished executing before it can continue with the next line of code.
 - **`async` is non-blocking:** When you call `dispatch_async` (or `DispatchQueue.async` in Swift), the current thread immediately continues executing the code that follows the `async` call, without waiting for the enqueued task to finish. The task is scheduled to run at some point in the future on an appropriate thread managed by GCD.
 
+| Feature | `async` (Asynchronous) | `sync` (Synchronous) |
+| ------- | ------------ | ---------------- |
+| Caller Behavior |  | | 
 
 ### Why does calling `DispatchQueue.main.sync { ... }` from the main thread cause a deadlock?
 
