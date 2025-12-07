@@ -1633,8 +1633,6 @@ func performBackgroundWorkAndUpdateUI() {
    - The main queue is the only queue that is allowed to interact with Apple's UIKit (iOS) or AppKit (macOS) frameworks.
    - Because it uses `async`, it doesn't block the background thread from finishing its own context, and the task safely waits for its turn on the main thread.
 
-
-
 ### How to perform work in the background and then update UI on the main thread?
 
 ### What is `DispatchGroup` and when to use it?
