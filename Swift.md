@@ -1562,7 +1562,7 @@ Imagine the main thread is a car driving down a single-lane tunnel (the serial m
 
 Global dispatch queues are system-provided concurrent queues that are shared across the entire application and system. They are designed for performing non-UI background tasks efficiently by running multiple tasks in parallel on a pool of threads managed by the operating system.
 
-Developers access these queues using `DispatchQueue.global()` and assign a Quality of Service (QoS) class to specify the priority and importance of the work being performed.
+Developers access these queues using `DispatchQueue.global()` and assign a **Quality of Service (QoS) class** to specify the priority and importance of the work being performed.
 
 ### How to perform work in the background and then update UI on the main thread?
 
