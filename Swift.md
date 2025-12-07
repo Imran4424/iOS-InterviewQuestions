@@ -1587,6 +1587,12 @@ The primary QoS classes available are (from highest priority to lowest):
 
 To perform work in the background and safely update the user interface (UI) on the main thread, we can combine `DispatchQueue.global().async` for the background work with `DispatchQueue.main.async` for the UI update.
 
+This is the standard and safest pattern in Swift for asynchronous programming in iOS and macOS applications.
+
+```
+```
+
+
 ### How to perform work in the background and then update UI on the main thread?
 
 ### What is `DispatchGroup` and when to use it?
