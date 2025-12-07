@@ -1622,7 +1622,6 @@ func performBackgroundWorkAndUpdateUI() {
         }
     }
 }
-
 ```
 
 
