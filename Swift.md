@@ -1660,7 +1660,6 @@ You track tasks within a group using a simple counting mechanism:
 - `notify(queue: ...)`: This is the preferred, asynchronous method for handling completion. You provide a closure that executes on a specified queue (usually the main queue for UI updates) when the group's counter reaches zero. This method is non-blocking.
 - `wait()`: This is a synchronous method that blocks the current thread until the group's counter reaches zero. This should only be used on a background thread to prevent blocking your app's main thread and causing unresponsiveness. 
 
-
 ### What is `DispatchSemaphore` and when to use it?
 
 ### What is `DispatchWorkItem` and why is it useful?
