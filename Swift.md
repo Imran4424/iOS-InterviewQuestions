@@ -1645,7 +1645,7 @@ We should use a DispatchGroup when we need to run several independent asynchrono
 
 Common use cases include:
 
-
+- **Coordinating Multiple API Calls:** Fetching user data, posts, and notifications simultaneously from different endpoints and updating the UI only after all three network requests succeed.
 
 ### What is `DispatchSemaphore` and when to use it?
 
