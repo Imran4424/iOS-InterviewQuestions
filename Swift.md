@@ -1641,6 +1641,8 @@ A `DispatchGroup` is a Grand Central Dispatch (GCD) mechanism that allows us to 
 
 When all the tasks associated with the group finish executing (the internal counter reaches zero), the group can either execute a completion handler or unblock a thread that is waiting for the results.
 
+#### When to use it?
+
 We should use a DispatchGroup when we need to run several independent asynchronous tasks (often in parallel) and must perform a specific action only after all of those tasks have been completed.
 
 Common use cases include:
