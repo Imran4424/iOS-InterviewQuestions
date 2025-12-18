@@ -1643,6 +1643,7 @@ When all the tasks associated with the group finish executing (the internal coun
 
 We should use a DispatchGroup when we need to run several independent asynchronous tasks (often in parallel) and must perform a specific action only after all of those tasks have been completed.
 
+Common use cases include:
 
 
 
