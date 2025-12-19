@@ -1662,6 +1662,8 @@ You track tasks within a group using a simple counting mechanism:
 
 ### What is `DispatchSemaphore` and when to use it?
 
+A `DispatchSemaphore` is a synchronization primitive used to control access to a shared resource or to limit the number of concurrent tasks allowed to run simultaneously. It maintains an internal counter that dictates whether a thread is permitted to proceed or must block and wait.
+
 ### What is `DispatchWorkItem` and why is it useful?
 
 ### What is a barrier block? Explain `.barrier` on concurrent queues.
