@@ -1670,6 +1670,8 @@ A `DispatchSemaphore` is a synchronization primitive used to control access to a
 - `wait()`: Decrements the counter. If the resulting value is less than zero, the current thread is blocked until another thread signals the semaphore.
 - `signal()`: Increments the counter. If there are blocked threads waiting, the system unblocks the one that has been waiting the longest. 
 
+#### When to Use a `DispatchSemaphore`
+
 ### What is `DispatchWorkItem` and why is it useful?
 
 ### What is a barrier block? Explain `.barrier` on concurrent queues.
