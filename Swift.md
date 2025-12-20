@@ -1653,16 +1653,22 @@ Common use cases include:
 
 ##### How It Works (Key Methods)
 
-You track tasks within a group using a simple counting mechanism:
+We track tasks within a group using a simple counting mechanism:
 
 - `enter()`: Call this method to manually signal that a new task has started or "entered" the group. This increments the group's internal counter.
 - `leave()`: Call this method when a specific task finishes its work. This decrements the group's internal counter. Every enter() call must have a corresponding leave() call, or the group's completion handler will never run.
-- `notify(queue: ...)`: This is the preferred, asynchronous method for handling completion. You provide a closure that executes on a specified queue (usually the main queue for UI updates) when the group's counter reaches zero. This method is non-blocking.
-- `wait()`: This is a synchronous method that blocks the current thread until the group's counter reaches zero. This should only be used on a background thread to prevent blocking your app's main thread and causing unresponsiveness. 
+- `notify(queue: ...)`: This is the preferred, asynchronous method for handling completion. We provide a closure that executes on a specified queue (usually the main queue for UI updates) when the group's counter reaches zero. This method is non-blocking.
+- `wait()`: This is a synchronous method that blocks the current thread until the group's counter reaches zero. This should only be used on a background thread to prevent blocking our app's main thread and causing unresponsiveness. 
 
 ### What is `DispatchSemaphore` and when to use it?
 
 A `DispatchSemaphore` is a synchronization primitive used to control access to a shared resource or to limit the number of concurrent tasks allowed to run simultaneously. It maintains an internal counter that dictates whether a thread is permitted to proceed or must block and wait.
+
+#### Key Mechanics
+
+- `init(value: Int)`: Initializes the semaphore with a starting permit count. A value of 1 acts as a mutual exclusion lock (mutex).
+- `wait()`: Decrements the counter. If the resulting value is less than zero, the current thread is blocked until another thread signals the semaphore.
+- `signal()`: Increments the counter. If there are blocked threads waiting, the system unblocks the one that has been waiting the longest. 
 
 ### What is `DispatchWorkItem` and why is it useful?
 
