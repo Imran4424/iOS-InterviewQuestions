@@ -1693,6 +1693,8 @@ Unlike passing a simple closure directly to a queue, a `DispatchWorkItem` provid
 Using `DispatchWorkItem` offers several advantages over standard "fire-and-forget" closures:
 
 - **Task Cancellation**: We can explicitly cancel a work item using `.cancel()`. If the item has not yet started, the queue will skip its execution.
+  - Real-world Example: In a search bar, we can cancel a previous API request work item every time a user types a new character to avoid redundant network calls.
+- **Completion Handlers**: We can use .notify(queue:execute:) to schedule a second task (e.g., updating the UI) to run automatically once the main work item finishes.
 
 ### What is a barrier block? Explain `.barrier` on concurrent queues.
 
