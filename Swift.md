@@ -1692,6 +1692,8 @@ Unlike passing a simple closure directly to a queue, a `DispatchWorkItem` provid
 
 Using `DispatchWorkItem` offers several advantages over standard "fire-and-forget" closures:
 
+- **Task Cancellation**: We can explicitly cancel a work item using `.cancel()`. If the item has not yet started, the queue will skip its execution.
+
 ### What is a barrier block? Explain `.barrier` on concurrent queues.
 
 ### What is a race condition? How to avoid it with GCD?
