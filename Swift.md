@@ -1686,6 +1686,8 @@ A `DispatchSemaphore` is a synchronization primitive used to control access to a
 
 A `DispatchWorkItem` is an object-oriented wrapper that encapsulates a block of code (a closure) intended for execution on a `DispatchQueue` or within a `DispatchGroup`.
 
+Unlike passing a simple closure directly to a queue, a DispatchWorkItem provides a handle to manage the task's lifecycle, including cancellation, dependencies, and completion monitoring.
+
 ### What is a barrier block? Explain `.barrier` on concurrent queues.
 
 ### What is a race condition? How to avoid it with GCD?
