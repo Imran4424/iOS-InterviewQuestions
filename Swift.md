@@ -1699,6 +1699,27 @@ Using `DispatchWorkItem` offers several advantages over standard "fire-and-forge
 - **Synchronous Waiting**: We can use `.wait()` to block a thread until the specific work item finishes executing, which is useful in background coordination.
 - **State Monitoring**: It provides an `.isCancelled` property, allowing code inside the work item to check if it should stop early during long-running loops.
 
+```swift
+var searchTask: DispatchWorkItem?
+
+func performSearch(query: String) {
+    // 1. Cancel the previous task if the user is still typing
+    searchTask?.cancel()
+    
+    // 2. Wrap the new search logic in a Work Item
+    let newTask = DispatchWorkItem { [weak self] in
+        print("Searching for: \(query)")
+        // Perform API call or heavy work here
+    }
+    
+    // 3. Save it to the variable so it can be cancelled later
+    searchTask = newTask
+    
+    // 4. Execute with a delay (debouncing)
+    DispatchQueue.global().asyncAfter(deadline: .now() + 0.3, execute: newTask)
+}
+```
+
 ### What is a barrier block? Explain `.barrier` on concurrent queues.
 
 ### What is a race condition? How to avoid it with GCD?
