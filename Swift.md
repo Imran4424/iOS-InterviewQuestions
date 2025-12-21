@@ -1672,6 +1672,10 @@ A `DispatchSemaphore` is a synchronization primitive used to control access to a
 
 #### When to Use a `DispatchSemaphore`
 
+- **Limiting Concurrent Work**: Restrict the number of active high-resource tasks, such as limiting the number of simultaneous network downloads to 2 or 3 at a time to avoid overloading the system.
+- **Protecting Shared Resources**: Prevent race conditions by ensuring only a specific number of threads (often just one) can access or modify a critical resource, like a shared database or file, at the same time.
+- **Converting Asynchronous Calls to Synchronous**: In specific background contexts, you can use a semaphore to block a thread until an asynchronous callback completes, forcing the execution to wait for a result.
+
 ### What is `DispatchWorkItem` and why is it useful?
 
 ### What is a barrier block? Explain `.barrier` on concurrent queues.
