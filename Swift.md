@@ -1690,6 +1690,7 @@ Unlike passing a simple closure directly to a queue, a `DispatchWorkItem` provid
 
 #### Why `DispatchWorkItem` is Useful?
 
+Using `DispatchWorkItem` offers several advantages over standard "fire-and-forget" closures:
 
 ### What is a barrier block? Explain `.barrier` on concurrent queues.
 
