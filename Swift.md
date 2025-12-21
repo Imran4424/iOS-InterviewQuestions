@@ -1696,6 +1696,8 @@ Using `DispatchWorkItem` offers several advantages over standard "fire-and-forge
   - Real-world Example: In a search bar, we can cancel a previous API request work item every time a user types a new character to avoid redundant network calls.
 - **Completion Handlers**: We can use .notify(queue:execute:) to schedule a second task (e.g., updating the UI) to run automatically once the main work item finishes.
 - **Dependency Management**: It allows us to specify dependencies between tasks, ensuring one work item does not execute until another completes.
+- **Synchronous Waiting**: We can use `.wait()` to block a thread until the specific work item finishes executing, which is useful in background coordination.
+- **State Monitoring**: It provides an `.isCancelled` property, allowing code inside the work item to check if it should stop early during long-running loops.
 
 ### What is a barrier block? Explain `.barrier` on concurrent queues.
 
