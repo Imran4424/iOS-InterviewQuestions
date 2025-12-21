@@ -1674,7 +1674,7 @@ A `DispatchSemaphore` is a synchronization primitive used to control access to a
 
 - **Limiting Concurrent Work**: Restrict the number of active high-resource tasks, such as limiting the number of simultaneous network downloads to 2 or 3 at a time to avoid overloading the system.
 - **Protecting Shared Resources**: Prevent race conditions by ensuring only a specific number of threads (often just one) can access or modify a critical resource, like a shared database or file, at the same time.
-- **Converting Asynchronous Calls to Synchronous**: In specific background contexts, you can use a semaphore to block a thread until an asynchronous callback completes, forcing the execution to wait for a result.
+- **Converting Asynchronous Calls to Synchronous**: In specific background contexts, we can use a semaphore to block a thread until an asynchronous callback completes, forcing the execution to wait for a result.
 
 
 #### Important Precautions
@@ -1686,7 +1686,10 @@ A `DispatchSemaphore` is a synchronization primitive used to control access to a
 
 A `DispatchWorkItem` is an object-oriented wrapper that encapsulates a block of code (a closure) intended for execution on a `DispatchQueue` or within a `DispatchGroup`.
 
-Unlike passing a simple closure directly to a queue, a DispatchWorkItem provides a handle to manage the task's lifecycle, including cancellation, dependencies, and completion monitoring.
+Unlike passing a simple closure directly to a queue, a `DispatchWorkItem` provides a handle to manage the task's lifecycle, including cancellation, dependencies, and completion monitoring.
+
+#### Why `DispatchWorkItem` is Useful?
+
 
 ### What is a barrier block? Explain `.barrier` on concurrent queues.
 
