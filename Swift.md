@@ -1676,6 +1676,12 @@ A `DispatchSemaphore` is a synchronization primitive used to control access to a
 - **Protecting Shared Resources**: Prevent race conditions by ensuring only a specific number of threads (often just one) can access or modify a critical resource, like a shared database or file, at the same time.
 - **Converting Asynchronous Calls to Synchronous**: In specific background contexts, you can use a semaphore to block a thread until an asynchronous callback completes, forcing the execution to wait for a result.
 
+
+#### Important Precautions
+
+- **Never call `wait()` on the main thread**: This will freeze the UI and likely cause a deadlock if the signaling task also depends on the main thread.
+- **Mandatory Balancing**: Every `wait()` must eventually be matched with a signal(). Forgetting to signal can leave threads permanently blocked, leading to application crashes or hangs.
+
 ### What is `DispatchWorkItem` and why is it useful?
 
 ### What is a barrier block? Explain `.barrier` on concurrent queues.
